@@ -1,36 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang = "ru">
   <head>
+    <meta charset="UTF-8" />
     <title>Lenni</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
-  <body>
-    <header>
-        <a href="#"></a>
-        <nav>
-            <a href="#">Мероприятия</a>
-            <a href="#">Блог</a>
-            <a href="#">О нас</a>
-            <a href="#">Контакты</a>
-            <a href="#">Войти</a>
+  <body class="body">
+    <header class="page-header">
+        <a class="page-header_logo" href="#">Logo</a>
+        <nav class="page-header_nav">
+            <a class = "page-header_nav-link" href="#">Мероприятия</a>
+            <a class = "page-header_nav-link" href="#">Блог</a>
+            <a class = "page-header_nav-link" href="#">О нас</a>
+            <a class = "page-header_nav-link" href="#">Контакты</a>  
         </nav>
+        <a class = "page-header_user-link" href="#">Войти</a>
     </header>
-    <main>
-        <header>
-            <h1>АРТ-ПРОСТРАНСТВО</h1>
-        </header>
-        <section>
-            <h2>О нас</h2>
-        </section>
-        <section>
-            <h2>Мероприятия</h2>
-        </section>
-        <section>
-            <h2>Блог</h2>
-        </section>
-        <section>
-            <h2>Контакты </h2>
-        </section>
+    <main class="main">
+        <div class="home">
+            <header class="main_header home_main-header">
+                <h1>АРТ-ПРОСТРАНСТВО</h1>
+                <p>ДЛЯ ЛЮДЕЙ, ГОРЯЩИХ СЕРДЦЕМ И ДЕЛОМ
+                    МЕСТО ДЛЯ НАСТОЯЩЕГО</p>
+            </header>
+
+            <section class="offers home_offers">
+                <h4 class="offers_title">я хочу</h4>
+                <div class="offers_buttons">
+                    <button class="offers_button button button-red" type="button">Провести мероприятие</button>
+                    <button class="offers_button button" type="button">Cтать арендатором</button>
+                </div>
+            </section>
+
+            <section class="about home_about">
+                <h2 class="about_section-title section-title">О нас</h2>
+                <div class="about_container"></div>
+            </section>
+
+            <section class="event home_event">
+                <h2 class="event_section-title section-title">Мероприятия</h2>
+                <div class="event_container"></div>
+            </section>
+
+            <section class="blog home_blog">
+                <h2 class="blog_section-title section-title">Блог</h2>
+                <div class="blog_container"></div>
+            </section>
+
+            <section class="contacts home_contacts">
+                <h2 class="contacts_section-title section-title">Контакты </h2>
+                <div class="contacts_container"></div>
+            </section>
+
+            <div class="text"></div>
+        </div>
     </main>
-    <footer></footer>
+    <footer class="page-footer"></footer>
   </body>
 </html>
