@@ -1,0 +1,26 @@
+.ticket{
+    &__item{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    &__color{
+        width: 24px;
+        height: 24px;
+        margin-right: 9px;
+
+        &--red {
+            background: @red;
+        }
+
+        &--black {
+            background: @black;
+        }
+    }
+    &__title{
+        font-family: @font1;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.35em;
+    }
+}

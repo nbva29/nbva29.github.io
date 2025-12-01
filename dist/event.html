@@ -35,20 +35,185 @@
 
    <main class="main">
      <article class="event">
+       <div class="body">
+         <main class="main">
+           <article class="article">
+             <div class="article__container">
+               <div class="article__content content">
+                 <h5>Программа мероприятия:</h5>
+                 <ul>
+                   <li>20:15 — Приветствие гостей</li>
+                   <li>20:30 — Первая подача блюд | Салаты</li>
+                   <li>20:40 — Живой вокал | Композиции 1-3</li>
+                   <li>21:20 — Подача горячих блюд</li>
+                   <li>21:30 — Живой вокал | Композиции 4-7</li>
+                   <li>22:15 — Подача десерта</li>
+                   <li>22:30 — Живой вокал | Композиции 8-9</li>
+                   <li>23:00 — Завершение вечера</li>
+                 </ul>
+                 <h5>The Best Of Sade</h5>
+                 <p>Первый альбом-компиляция Sade, выпущенный в 1994 году. Он содержит 9 треков, включая самые популярные хиты группы, раритеты и их любимые треки.
+                   <br />
+                   <br />
+                   Группа продемонстрировала необычайное долголетие и креативность своей творческой карьеры.
+                   Она лидировала музыкальных чартах с 1994 по 1995 год, став четырехкратно платиновой в США и продав более 2 миллионов копий в Европе.
+                 </p>
+                 <ol>
+                   <li>Your Love Is King</li>
+                   <li>Hang On To Your Love</li>
+                   <li>Smooth Operator</li>
+                   <li>Jezebel</li>
+                   <li>The Sweetest Taboo</li>
+                   <li>Is It A Crime</li>
+                   <li>Never As Good As The First Time</li>
+                   <li>Love Is Stronger Than Pride</li>
+                   <li>Paradise</li>
+                 </ol>
 
-       <form class="reserve event__reserve">
+               </div>
+             </div>
+           </article>
+         </main>
+       </div>
+       <form class="reserve">
+
          <div class="reserve__checks">
-           Забронировать столик
+           <h4 class="reserve__section-title">
+             Забронировать столик
+           </h4>
+
+           <label class="reserve__check check check--red">
+             <input type="checkbox" name="table_1" class="check__input" />
+             <span class="check__mark"></span>
+             <span class="check__label">1 стол</span>
+           </label>
+
+           <label class="reserve__check check">
+             <input type="checkbox" name="table_2" class="check__input" />
+             <span class="check__mark"></span>
+             <span class="check__label">2 стол</span>
+           </label>
+
+           <label class="reserve__check check">
+             <input type="checkbox" name="table_3" class="check__input" />
+             <span class="check__mark"></span>
+             <span class="check__label">3 стол</span>
+           </label>
+
+           <label class="reserve__check check check--red">
+             <input type="checkbox" name="table_4" class="check__input" />
+             <span class="check__mark"></span>
+             <span class="check__label">4 стол</span>
+           </label>
+
+           <label class="reserve__check check check--disabled">
+             <input type="checkbox" name="table_5" class="check__input" disabled />
+             <span class="check__mark"></span>
+             <span class="check__label">5 стол </span>
+           </label>
+
+           <label class="reserve__check check">
+             <input type="checkbox" name="table_6" class="check__input" disabled />
+             <span class="check__mark"></span>
+             <span class="check__label">6 стол </span>
+           </label>
+
+           <label class="reserve__check check check--red">
+             <input type="checkbox" name="table_7" class="check__input" disabled />
+             <span class="check__mark"></span>
+             <span class="check__label">7 стол </span>
+           </label>
+
+           <label class="reserve__check check check--red">
+             <input type="checkbox" name="table_8" class="check__input" disabled />
+             <span class="check__mark"></span>
+             <span class="check__label">8 стол </span>
+           </label>
+
+           <label class="reserve__check check check--red">
+             <input type="checkbox" name="table_9" class="check__input" disabled />
+             <span class="check__mark"></span>
+             <span class="check__label">9 стол </span>
+           </label>
+
+           <label class="reserve__check check">
+             <input type="checkbox" name="table_10" class="check__input" disabled />
+             <span class="check__mark"></span>
+             <span class="check__label">10 стол </span>
+           </label>
+
+           <label class="reserve__check check">
+             <input type="checkbox" name="table_11" class="check__input" disabled />
+             <span class="check__mark"></span>
+             <span class="check__label">11 стол </span>
+           </label>
          </div>
+
+
          <div class="reserve__scheme">
-           Сцена
+           <div class="reserve__scheme-container">
+             <h4 class="reserve__scheme-title">Сцена</h4>
+
+             <div class="reserve__scheme-wrapper">
+               <svg class="reserve__scene scene" width="780" height="399">
+                 <use xlink:href="assets/icons/scene.svg"></use>
+               </svg>
+             </div>
+           </div>
          </div>
+
+
          <div class="reserve__order">
-           Ваши пригласительные билеты
+           <h4 class="reserve__section-title">Ваши пригласительные билеты</h4>
+
+           <div class="reserve__tickets-list">
+             <div class="reserve__tickets">
+               <div class="reserve__qty" data-caption="шт." data-price="1400">0</div>
+               <div class="reserve__sum" data-currency="₽">0</div>
+             </div>
+
+             <div class="reserve__tickets">
+               <div class="reserve__qty" data-caption="шт." data-price="1250">0</div>
+               <div class="reserve__sum" data-currency="₽">0</div>
+             </div>
+           </div>
+
+           <div class="reserve__total" data-caption="Сумма" data-currency="₽">0</div>
+           <button type="submit" class="button button--red reserve__submit">
+             Купить билеты
+           </button>
          </div>
+
          <div class="reserve__legend">
-           Стоимость пригласительного билета
+           <h4 class="reserve__section-title">Стоимость пригласительного билета</h4>
+
+           <div class="reserve__tickets-info">
+             <div class="ticket__item">
+               <span class="ticket__color ticket__color--red"></span>
+               <span class="ticket__title">1400 ₽ | 1 персона</span>
+             </div>
+
+             <div class="ticket__item">
+               <span class="ticket__color ticket__color--black"></span>
+               <span class="ticket__title">1250 ₽ | 1 персона</span>
+             </div>
+           </div>
+
+           <h5 class="reserve__section-subtitle">Примечание</h5>
+
+           <div class="reserve__dot">
+             <div class="dot__item">
+               <span class="dot-color"></span>
+               <span class="ticket__title">доступные места</span>
+             </div>
+
+             <div class="dot__item">
+               <span class="dot-color dot-color--grey"></span>
+               <span class="ticket__title">забронировано</span>
+             </div>
+           </div>
          </div>
+
        </form>
      </article>
    </main>

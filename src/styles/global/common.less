@@ -2,6 +2,7 @@ html, body{
     width: 100%;
     margin: 0;
     padding: 0;
+    font-family: @font1;
 }
 
 body{
@@ -29,6 +30,7 @@ body{
 
 .page-footer{
     flex: 0 0 auto;
+    height: 455px;
 }
 
 a{
@@ -40,4 +42,32 @@ img {
     max-width: 100%;
     height: auto;
     object-fit: cover;
+}
+
+input,
+textarea,
+select{
+    box-shadow: none;
+    outline: none;
+    color: @black;
+    font-family: @font1;
+}
+
+input,
+textarea{
+    &::placeholder{
+        color: #6c6c6c;
+    }
+}
+
+input:focus,
+textarea:focus{
+    &::placeholder{
+        color: transparent;
+    }
+
+}
+
+textarea{
+    resize: none;
 }

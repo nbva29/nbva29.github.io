@@ -6,20 +6,12 @@
 
     <main class="main">
     <article class="event">
-
-        <form class="reserve event__reserve">
-        <div class="reserve__checks">
-            Забронировать столик
-        </div>
-        <div class="reserve__scheme">
-            Сцена
-        </div>
-        <div class="reserve__order">
-            Ваши пригласительные билеты
-        </div>
-        <div class="reserve__legend">
-            Стоимость пригласительного билета
-        </div>
+        @@include('blocks/text.html')
+        <form class="reserve">
+            @@include('blocks/checkboxes.html')
+            @@include('blocks/scene.html')
+            @@include('blocks/order.html')
+            @@include('blocks/legend.html')
         </form>
     </article>
     </main>

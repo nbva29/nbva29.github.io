@@ -1,0 +1,78 @@
+.content{
+    font-family: @font1;
+    font-size: 16px;
+    line-height: 1.375;
+    font-style: normal;
+    color: @black;
+    word-wrap: break-word;
+
+    h5{
+        font-family: @font1;
+        font-size: 18px;
+        line-height: 1.39;
+        font-weight: 700;
+        color: @black;
+        margin:0 0 20px;
+    }
+
+    ul,
+    p,
+    ol{
+        margin: 0;
+        padding: 0;
+    }
+
+    ul{
+        margin-bottom: 75px;
+        list-style: none;
+        position: relative;
+    }
+
+    ul > li,
+    ol > li{
+        margin: 0 0 10px;
+
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+
+    ul > li{
+        box-sizing: border-box;
+        position: relative;
+        padding-left: 10px;
+
+        &::before{
+            content: "";
+            display: block;
+            position: absolute;
+            top: 8px;
+            left: 0;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: @red;
+            pointer-events: none;
+        }
+    }
+
+    ol{
+        counter-reset: num;
+        list-style: none;      
+        margin: 50px 0 0;
+    }
+
+    ol > li{
+        counter-increment: num;
+    }                          
+
+    ol > li::before{
+        content: counter(num) ".";
+        min-width: 20px;
+        display: inline-block;
+    }
+
+    p{
+        margin: 15px 0 0;
+    }
+}
