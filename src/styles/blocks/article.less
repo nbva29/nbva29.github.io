@@ -1,9 +1,14 @@
 .article{
-    padding: 40px 0 150px;
-    &__container{
-        .container();
+    padding: 40px 0 80px;
+    width: 100%;
+    @media @bw1020 {
+        padding-bottom: 54px;
+    }
+    @media @bw768 {
+        padding-bottom: 40px;
     }
     &__content{
         max-width: 830px;
+        width: 100%;
     }
 }

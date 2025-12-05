@@ -3,6 +3,8 @@
 
  <head>
    <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
    <title>Lenni</title>
    <link rel="preconnect" href="https://fonts.googleapis.com" />
    <link rel="preconnect" href="https://fonts.gstatic.com" crossoriginn />
@@ -25,56 +27,69 @@
          <a class="page-header__nav-link" href="#">О нас</a>
          <a class="page-header__nav-link" href="#">Контакты</a>
        </nav>
-       <div class="page-header__button_right-block">
-         <button class="button">
-           Войти
-         </button>
+
+       <div class="page-header__nav-user">
+         <a href="#" class="page-header__nav-user-link">
+           Александр С.
+         </a>
+         <a href="#" class="page-header__nav-logout">
+           <svg class="page-header__nav-logout-icon" width="24" height="24">
+             <use xlink:href="assets/icons/log-in.svg"></use>
+           </svg>
+         </a>
        </div>
+       <div class="page-header__right-block">
+         <a href="#" class="page-header__user-btn button">
+           Войти
+           <svg class="page-header__user-icon" width="20" height="17">
+             <use xlink:href="assets/icons/user.svg"></use>
+           </svg>
+         </a>
+         <button type="button" class="page-header__nav-toggle"></button>
+       </div>
+
      </div>
    </header>
 
    <main class="main">
      <article class="event">
-       <div class="body">
-         <main class="main">
-           <article class="article">
-             <div class="article__container">
-               <div class="article__content content">
-                 <h5>Программа мероприятия:</h5>
-                 <ul>
-                   <li>20:15 — Приветствие гостей</li>
-                   <li>20:30 — Первая подача блюд | Салаты</li>
-                   <li>20:40 — Живой вокал | Композиции 1-3</li>
-                   <li>21:20 — Подача горячих блюд</li>
-                   <li>21:30 — Живой вокал | Композиции 4-7</li>
-                   <li>22:15 — Подача десерта</li>
-                   <li>22:30 — Живой вокал | Композиции 8-9</li>
-                   <li>23:00 — Завершение вечера</li>
-                 </ul>
-                 <h5>The Best Of Sade</h5>
-                 <p>Первый альбом-компиляция Sade, выпущенный в 1994 году. Он содержит 9 треков, включая самые популярные хиты группы, раритеты и их любимые треки.
-                   <br />
-                   <br />
-                   Группа продемонстрировала необычайное долголетие и креативность своей творческой карьеры.
-                   Она лидировала музыкальных чартах с 1994 по 1995 год, став четырехкратно платиновой в США и продав более 2 миллионов копий в Европе.
-                 </p>
-                 <ol>
-                   <li>Your Love Is King</li>
-                   <li>Hang On To Your Love</li>
-                   <li>Smooth Operator</li>
-                   <li>Jezebel</li>
-                   <li>The Sweetest Taboo</li>
-                   <li>Is It A Crime</li>
-                   <li>Never As Good As The First Time</li>
-                   <li>Love Is Stronger Than Pride</li>
-                   <li>Paradise</li>
-                 </ol>
 
-               </div>
-             </div>
-           </article>
-         </main>
-       </div>
+       <article class="article">
+         <div class="article__container">
+           <div class="article__content content">
+             <h5>Программа мероприятия:</h5>
+             <ul>
+               <li>20:15 — Приветствие гостей</li>
+               <li>20:30 — Первая подача блюд | Салаты</li>
+               <li>20:40 — Живой вокал | Композиции 1-3</li>
+               <li>21:20 — Подача горячих блюд</li>
+               <li>21:30 — Живой вокал | Композиции 4-7</li>
+               <li>22:15 — Подача десерта</li>
+               <li>22:30 — Живой вокал | Композиции 8-9</li>
+               <li>23:00 — Завершение вечера</li>
+             </ul>
+             <h5>The Best Of Sade</h5>
+             <p>Первый альбом-компиляция Sade, выпущенный в 1994 году. Он содержит 9 треков, включая самые популярные хиты группы, раритеты и их любимые треки.
+               <br />
+               <br />
+               Группа продемонстрировала необычайное долголетие и креативность своей творческой карьеры.
+               Она лидировала музыкальных чартах с 1994 по 1995 год, став четырехкратно платиновой в США и продав более 2 миллионов копий в Европе.
+             </p>
+             <ol>
+               <li>Your Love Is King</li>
+               <li>Hang On To Your Love</li>
+               <li>Smooth Operator</li>
+               <li>Jezebel</li>
+               <li>The Sweetest Taboo</li>
+               <li>Is It A Crime</li>
+               <li>Never As Good As The First Time</li>
+               <li>Love Is Stronger Than Pride</li>
+               <li>Paradise</li>
+             </ol>
+
+           </div>
+         </div>
+       </article>
        <form class="reserve">
 
          <div class="reserve__checks">

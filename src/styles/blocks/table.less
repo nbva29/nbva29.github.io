@@ -3,9 +3,34 @@
   border-collapse: collapse;
   color: @black;
   text-align: center;
+  @media @bw768{
+    display: block;
+    margin: 0 -20px;
+    width: calc(100%);
+  }
+  &__head,
+  &__body,
+  &__footer{
+    @media @bw768{
+      display: block;
+    }
+  }
+  &__head-tr{
+    @media @bw768{
+      display: flex;
+      width: 100%;
+    }
+  }
   &__tr {
+    @media @bw768{
+      display: flex;
+      flex-wrap: wrap;
+    }
     &:nth-child(2n-1) {
       background-color: fade(@black, 3%);
+      @media @bw768{
+        background-color: transparent;
+      }
     }
   }
   &__th {
@@ -13,19 +38,37 @@
     font-weight: 600;
     font-size: 18px;
     line-height: 25px;
+    @media @bw768{
+      font-size: 14px;
+      line-height: 19px;
+    }
   }
   &__footer-th {
     height: 60px;
     font-size: 0;
+    @media @bw768{
+      font-weight: 300;
+      font-size: 16px;
+    }
   }
   &__th,
   &__footer-th {
     box-sizing: border-box;
     padding: 10px;
-    border-right: 1px solid @grey;
+    border-right: 1px solid @gray;
     text-transform: uppercase;
+    @media @bw768{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: 33.3333%;
+    }
     &:first-child {
       padding-left: 0;
+      @media @bw768{
+        display: none;
+      }
     }
     &:last-child {
       border-right: none;
@@ -36,25 +79,44 @@
     box-sizing: border-box;
     height: 50px;
     padding: 10px 10px 10px 0;
-    border-top: 1px solid @grey;
-    border-bottom: 1px solid @grey;
+    border-top: 1px solid @gray;
+    border-bottom: 1px solid @gray;
     font-weight: 400;
     font-size: 18px;
     line-height: 25px;
     text-align: left;
+    @media @bw768{
+      display: block;
+      width: 100%;
+      text-align: center;
+      font-weight: 600;
+    }
   }
   &__td {
     box-sizing: border-box;
     height: 50px;
     padding: 10px;
-    border: 1px solid @grey;
+    border: 1px solid @gray;
     font-weight: 600;
     font-size: 16px;
     line-height: 22px;
+    @media @bw768{
+      width: 33.3333%;
+    }
 
     &:last-child {
       border-right: none;
       padding-right: 0;
+    }
+    &:nth-child(2n-1){
+      @media @bw768{
+        background-color: fade(@black, 3%);
+      } 
+    }
+  }
+  &__footer-tr{
+    @media @bw768{
+      display: flex;
     }
   }
 }

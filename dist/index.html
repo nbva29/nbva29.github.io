@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="ru" class="show-event-popup">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
   <title>Lenni</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossoriginn />
@@ -25,11 +27,27 @@
         <a class="page-header__nav-link" href="#">О нас</a>
         <a class="page-header__nav-link" href="#">Контакты</a>
       </nav>
-      <div class="page-header__button_right-block">
-        <button class="button">
-          Войти
-        </button>
+
+      <div class="page-header__nav-user">
+        <a href="#" class="page-header__nav-user-link">
+          Александр С.
+        </a>
+        <a href="#" class="page-header__nav-logout">
+          <svg class="page-header__nav-logout-icon" width="24" height="24">
+            <use xlink:href="assets/icons/log-in.svg"></use>
+          </svg>
+        </a>
       </div>
+      <div class="page-header__right-block">
+        <a href="#" class="page-header__user-btn button">
+          Войти
+          <svg class="page-header__user-icon" width="20" height="17">
+            <use xlink:href="assets/icons/user.svg"></use>
+          </svg>
+        </a>
+        <button type="button" class="page-header__nav-toggle"></button>
+      </div>
+
     </div>
   </header>
   <main class="main">

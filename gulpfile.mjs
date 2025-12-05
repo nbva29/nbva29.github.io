@@ -158,7 +158,10 @@ function reloadServer(done){
 
 function serve(){
     server.init({
-        server: "dist"
+        server: "dist",
+        notify: false,
+        open: false,
+        snippet: false
     });
     gulp.watch(resources.html, gulp.series(includeHtml, reloadServer));
     gulp.watch(resources.less, gulp.series(style, reloadServer));
