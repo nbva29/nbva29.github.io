@@ -6,6 +6,18 @@
 
     <main class="main">
     <article class="event">
+        @@loop('blocks/event-info.html', [
+            {
+                "class": "",
+                "img": "assets/images/event/sade_detail.jpg",
+                "img_webp": "assets/images/event/sade_detail.webp",
+                "img_tablet": "assets/images/event/sade_detail_tablet.jpg",
+                "img_tablet_webp": "assets/images/event/sade_detail_tablet.webp",
+                "img_phone": "assets/images/event/sade_detail_phone.jpg",
+                "img_phone_webp": "assets/images/event/sade_detail_phone.webp",
+                "alt": "TheBestOfSade"                                       
+            }
+        ])
         @@include('blocks/text.html')
         <form class="reserve">
             @@include('blocks/checkboxes.html')
