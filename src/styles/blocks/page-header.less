@@ -112,7 +112,7 @@
   &__nav-user {
     display: none;
     @media @bw1020 {
-      display: none;
+      display: flex;
       align-items: center;
       margin-top: 20px;
     }
@@ -213,6 +213,8 @@
       height: 2px;
       border-radius: 2px;
       background-color: @black;
+      transform-origin: 50% 50%;
+      transition: transform 0.4s, box-shadow 0.4s;
     }
     &::before {
       top: 13px;
