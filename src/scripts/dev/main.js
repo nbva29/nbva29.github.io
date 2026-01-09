@@ -8,4 +8,322 @@
     navToggle.addEventListener("click", function(){
         root.classList.toggle("show-nav");
     });
+
+    const eventPP = document.querySelector("#js-eventPP");
+
+    if(eventPP){
+
+        const eventOpenBtn = document.querySelector("#js-eventOpenBtn");
+
+        const closeEventPP = function(event){
+
+            function close() {
+                document.removeEventListener("keyup", closeEventPP);
+                eventPP.removeEventListener("click", closeEventPP);
+
+                eventPP.classList.remove("pp--active");
+            };
+
+            switch (event.type){
+                case "keyup":
+                    if (event.key === "Escape" ) close();
+                    break;
+                case "click":
+                    if (event.target === this || event.target.classList.contains("js-ppCloseBtn")){
+                        close();
+                        break;
+                    }
+            }
+        };
+
+        eventOpenBtn.addEventListener("click", function(){
+            eventPP.classList.add("pp--active");
+
+            document.addEventListener("keyup", closeEventPP);
+            eventPP.addEventListener("click", closeEventPP);
+        });
+
+    }
+
+    let swipers = document.querySelectorAll(".js-swiper");
+
+    swipers.forEach(function(swpr){
+        new Swiper(swpr, {
+            updateOnWindowResize: true,
+            slidesPerView: "auto",
+            freeMode: true,
+            spaceBetween: 0,
+            speed: 500,
+            grabCursor: true,
+            pagination: {
+                el: swpr.querySelector(".swiper-pagination"),
+                clickable: true
+            },
+            navigation: {
+                nextEl: swpr.querySelector(".swiper-arrow-next"),
+                prevEl: swpr.querySelector(".swiper-arrow-prev"),
+                disabledClass: "arrow--disabled"
+            }
+        });
+    });
+
+    const contactsMap = document.querySelector("#js-contactsMap");
+
+    if (contactsMap){
+
+        const mapStyles = [
+  {
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#242f3e"
+      }
+    ]
+  },
+  {
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#746855"
+      }
+    ]
+  },
+  {
+    "elementType": "labels.text.stroke",
+    "stylers": [
+      {
+        "color": "#242f3e"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative.locality",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#d59563"
+      }
+    ]
+  },
+  {
+    "featureType": "poi",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#d59563"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.business",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.park",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#263c3f"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.park",
+    "elementType": "labels.text",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.park",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#6b9a76"
+      }
+    ]
+  },
+  {
+    "featureType": "road",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#38414e"
+      }
+    ]
+  },
+  {
+    "featureType": "road",
+    "elementType": "geometry.stroke",
+    "stylers": [
+      {
+        "color": "#212a37"
+      }
+    ]
+  },
+  {
+    "featureType": "road",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#9ca5b3"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#746855"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "elementType": "geometry.stroke",
+    "stylers": [
+      {
+        "color": "#1f2835"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#f3d19c"
+      }
+    ]
+  },
+  {
+    "featureType": "transit",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#2f3948"
+      }
+    ]
+  },
+  {
+    "featureType": "transit.station",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#d59563"
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#17263c"
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#515c6d"
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "elementType": "labels.text.stroke",
+    "stylers": [
+      {
+        "color": "#17263c"
+      }
+    ]
+  }
+        ];
+
+        const mapCenter = new google.maps.LatLng(56.45437, 84.97977);
+
+        const mapOptions = {
+            center: mapCenter,
+            disableDefaultUI: true,
+            draggable: true,
+            gestureHandling: "cooperative",
+            scrollwheel: false,
+            styles: mapStyles,
+            zoom: 15,
+            zoomControl: true,
+            zoomControlOptions:{
+                position: google.maps.ControlPosition.RIGHT_BOTTOM
+            }
+        };
+
+        const map = new google.maps.Map(contactsMap, mapOptions);
+
+        const mapPin = new google.maps.MarkerImage(
+            "data:image/png;base64,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",
+            new google.maps.Size(91, 71),
+            new google.maps.Point(0, 0),
+            new google.maps.Point(0, 71),
+        );
+
+        new google.maps.Marker({
+            position: new google.maps.LatLng(56.45437, 84.97977),
+            map: map,
+            icon: mapPin,
+            title: "ИТ-Академия ТУСУР"
+        });
+    }
+
+    const jsSelectric = $(".js-selectric");
+
+    if (jsSelectric.length) {
+      jsSelectric.selectric({
+        nativeOnMobile: false
+      });
+    }
+
+    const mobileMask = $(".js-mobileMask");
+
+    if (mobileMask.length) {
+      mobileMask.mask('+7 (000) 000 00 00', {placeholder: "+7 (___) ___ __ __"});
+    }
+
+    const dateField = $(".js-dateField");
+
+    if (dateField.length) {
+      const pickerInit = function (pick) {
+        let dateInput = pick.find(".js-dateInput");
+        let dateDay = pick.find(".js-dateDay");
+        let dateMonth = pick.find(".js-dateMonth");
+        let dateYear = pick.find(".js-dateYear");
+
+      const dateConfig = {
+        autoClose: true,
+        minDate: new Date(),
+        navTitles: {
+          days: "MMMM <i>yyyy</i>"
+      },
+      onSelect: function ({ date }) {
+        dateDay.val(date ? ("0" + date.getDate()).slice(-2) : "");
+        dateMonth.val(date ? ("0" + (date.getMonth() + 1)).slice(-2) : "");
+        dateYear.val(date ? date.getFullYear() : "");
+      },
+    };
+    new AirDatepicker(dateInput[0], dateConfig);
+  };
+
+  $.each(dateField, function (i) {
+    pickerInit($(this));
+  });
+}
+
 })();

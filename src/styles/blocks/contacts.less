@@ -1,0 +1,64 @@
+.contacts{
+    &__blocks{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+    }
+    &__info{
+        width: 100%;
+        max-width: 464px;
+    }
+    &__map{
+        width: 752px;
+        height: 493px;
+        position: relative;
+        overflow: hidden;
+        flex-shrink: 0;
+    }
+    &__location,
+    &__home,
+    &__star {
+        display: flex;
+        align-items: center; 
+        gap: 54px;
+        margin-bottom: 65px;
+    }
+    &__star{
+        margin-bottom: 0;
+    }
+    &__icon {
+        flex-shrink: 0; 
+    }
+    &__name{
+        margin: 0 0 10px;
+        font-family: @font1;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 1.35;
+        color: @black;
+    }
+    &__content{
+        margin: 0;
+        text-decoration: none;
+        font-family: @font1;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.375;
+        color: @black;
+        a {
+            text-decoration: none;      
+            color: inherit;             
+            transition: text-decoration 0.2s;
+
+            &:hover {
+                text-decoration: underline; // появляется при наведении
+            }
+        }
+    }
+    &__container{
+        .container();
+        display: flex;
+        flex-direction: column;
+    }
+}

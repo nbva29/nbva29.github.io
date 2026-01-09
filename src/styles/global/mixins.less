@@ -28,6 +28,10 @@
     }
 }
 
+.pp-overflow{
+    overflow: hidden;
+}
+
 .is-hidden{
     position: absolute !important; 
     width: 0 !important;
@@ -43,7 +47,8 @@
     pointer-events: none !important;
 }
 
-.show-nav body{
+.show-nav{
+    body{
     @media @bw1020{
         overflow: hidden;
         }
@@ -62,4 +67,6 @@
             transform: translate(0, -6px) rotate(-45deg);
         }
     }
+} 
+
 

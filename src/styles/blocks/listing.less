@@ -1,8 +1,15 @@
 .listing{
+    padding-top: 200px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     .container();
+    @media @bw768{
+        padding-top: 150px;
+    }
+    @media @bw370{
+        padding-top: 80px;
+    }
     &__events-list{
         display: flex;
         flex-wrap: wrap;

@@ -1,0 +1,54 @@
+.subscribe-form{
+    display: flex;
+    flex-direction: column;
+    &__title{
+        margin:auto 0 14px;
+        font-family: @font1;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.375;
+        color: @black;
+    }
+    &__wrapper{
+        display: flex;
+        margin-bottom: 15px;
+        width: 100%;
+        max-width: 405px;
+    }
+    &__field-wrapper{
+        flex: 1;
+        flex-direction: column;
+        display: flex;
+    }
+    &__input {
+        width: 100%;
+        height: 49px;
+        padding: 0 0 0 28px;
+        font-family: @font1;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.35;
+        color: rgba(108, 108, 108, 1);
+        border: none;
+    }
+    &__submit {
+        min-width: 135px;   
+        height: 49px;
+        padding: 15px 23px;
+        border: none;
+        background-color: @black;
+        color: @white;
+        font-family: @font1;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.35;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+        &:hover {
+            background-color: @red;
+        }
+    }
+    span.error{
+        color: @red;
+    }  
+}

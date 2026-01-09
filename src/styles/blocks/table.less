@@ -3,10 +3,25 @@
   border-collapse: collapse;
   color: @black;
   text-align: center;
+  padding-bottom: 50px;
   @media @bw768{
     display: block;
     margin: 0 -20px;
     width: calc(100%);
+  }
+  @media @bw1340{
+    padding-bottom: 40px;
+  }
+  &__p{
+    margin: 0 0 60px;
+    text-align: left;
+    font-family: @font1;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.375;
+    max-width: 868px;
+    width: 100%;
+    color: @black;
   }
   &__head,
   &__body,

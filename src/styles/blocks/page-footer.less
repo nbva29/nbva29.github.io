@@ -1,0 +1,117 @@
+.page-footer{
+    .container();
+    position: relative;
+    padding-bottom: 75px;
+    display: flex;
+    flex-direction: column;
+    &__main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 98px;
+        margin-bottom: 60px; 
+    }
+    &__body{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+    }
+
+    &__line {
+        display: block;
+        &--rotate{
+            transform: rotate(180deg);
+        }
+    }
+    &__column{
+        display: flex;
+        flex-direction: column;
+    }
+    &__links{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        width: 100%;
+        max-width: 230px;
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 4px;
+            height: 198px;
+            background-color: @red;
+        }
+    }
+    &__item{
+        padding-left: 22px;
+        &:not(:last-child) {
+            margin-bottom: 22px;     
+        }  
+    }
+    &__link{
+        display: inline-block;    
+        color: @black;
+        font-family: @font1;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.375;
+        text-decoration: none;
+        transition: color 0.2s ease;
+        &:hover {
+            color: @red;
+        }
+    }
+    &__Millennials{
+        margin: 60px 0 20px;
+        color: @black;
+        font-family: @font1;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.375;
+        text-decoration: none;
+    }
+    &__legal{
+        display: flex; 
+        gap: 60px;
+    }
+    &__socials {                
+        display: flex;
+        gap: 44px; 
+        margin-top: auto;                
+    }
+    &__icon{
+        width: 100%;
+        height: 100%;
+        max-height: 58px;
+    }
+    &__dignity{
+        margin-top: 166px;
+        margin-left: auto;
+        &--link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            font-family: @font1;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 1.375;
+            color: @black;
+            span {    
+                color: inherit;             
+                transition: text-decoration 0.2s;
+            }
+        }
+        &:hover span{
+            text-decoration: underline;
+        }
+        &--logo{
+            pointer-events: none;
+        }
+    }
+}
+
+

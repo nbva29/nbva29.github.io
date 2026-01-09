@@ -18,8 +18,7 @@
                                 "title": "Собираемся и слушаем альбом Nirvana. Nirvana",
                                 "description": "Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный материал.",
                                 "time": "07.12.2024 | начало 18.00",
-                                "datetime": "2024-12-07T18:00",
-                                "ref":"../event.html"
+                                "datetime": "2024-12-07T18:00"
                             },
                             {
                                 "class": "listing__event-card",
@@ -76,10 +75,21 @@
                         @@include('blocks/table.html')
                     </div>
                 </section>
+                @@include('blocks/offers.html')
+                @@include('blocks/events-elem.html')
             </div>
         </main>
         @@include('blocks/page-footer.html')
         @@include('blocks/event-pp.html')
+        <script src="scripts/jquery-3.7.1.min.js"></script>
+
+        <script src="scripts/jquery.selectric.js"></script>
+        <script src="scripts/jquery.mask.js"></script>
+        <script src="scripts/air-datepicker.js"></script>
+
+        <script src="scripts/jquery.validate.js"></script>
+        <script src="scripts/jquery.validate-init.js"></script>
+
         <script src="scripts/main.min.js"></script>
     </body>
 </html>

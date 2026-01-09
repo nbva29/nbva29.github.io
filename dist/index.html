@@ -5,11 +5,46 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-  <title>Lenni</title>
+  <title>Lenni Art</title>
+  <meta name="description" content="Арт—пространство для людей, горящих сердец и делом">
+
+  <meta name="keywords" content="Lenni Art, пространство, мероприятия">
+
+  <meta property="og:title" content="Lenni Art" />
+  <meta property="og:description" content="Арт пространство для людей, горящих сердцем и делом" />
+  <meta property="og:image" content="/assets/images/lenni-art.jpg">
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lenni-art.ru/" />
+
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossoriginn />
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@400,500;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="stylesheet" href="styles/styles.min.css" />
+
+  <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="/assets/favicons/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
+
+  <meta name="msapplication-TileColor" content="#dedede">
+  <meta name="msapplication-TileImage" content="/assets/favicons/ms-icon-144x144.png">
+  <meta name="msapplication-config" content="/assets/favicons/browserconfig.xml">
+  <link rel="mask-icon" href="/assets/favicons/safari-pinned-tab.svg" color="#bc3324">
+
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon-180x180.png">
+
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicons/android-icon-192x192.png">
+  <link rel="manifest" href="/assets/favicons/site.webmanifest">
+
+  <meta name="apple-mobile-web-app-title" content="Lenni Art">
+  <meta name="application-name" content="Lenni Art">
+
+  <meta name="theme-color" content="#dedede">
+
 </head>
 
 <body class="body">
@@ -52,145 +87,427 @@
   </header>
   <main class="main">
     <div class="home">
+
       <header class="main__header home__main-header">
-        <h1>АРТ-ПРОСТРАНСТВО</h1>
-        <img src="assets/LENNI.svg" class="page-LENNI" alt="LENNI" />
+        <h1 class="main-header__title">АРТ — ПРОСТРАНСТВО</h1>
+        <svg class="main-header__icon" width="1920" height="325">
+          <use xlink:href="assets/icons/LENNI.svg"></use>
+        </svg>
+        <p class="main-header__title">ДЛЯ ЛЮДЕЙ, ГОРЯЩИХ СЕРДЦЕМ И ДЕЛОМ
+          <br>МЕСТО ДЛЯ НАСТОЯЩЕГО
+        </p>
+        <header>
 
-        <p>ДЛЯ ЛЮДЕЙ, ГОРЯЩИХ СЕРДЦЕМ И ДЕЛОМ
-          МЕСТО ДЛЯ НАСТОЯЩЕГО</p>
-      </header>
-
-      <section class="offers home__offers">
-        <h4 class="offers__title">Я ХОЧУ:<h4>
-            <div class="offers__buttons">
-              <button class="offers__button button button-red" type="button">Провести мероприятие</button>
-              <button class="offers__button button" type="button">Cтать арендатором</button>
+          <section class="offers @@class">
+            <h4 class="offers__title">Я ХОЧУ:</h4>
+            <div class="offers__btns">
+              <button type="button" class="offers__button button button--red" id="js-eventOpenBtn">
+                Провести мероприятие
+              </button>
+              <button type="button" class="offers__button button">
+                Стать арендатором
+              </button>
             </div>
-      </section>
+          </section>
 
-      <section class=" style-section about home__about">
-        <h2 class="about__section-title section-title">О НАС</h2>
-        <div class="about__container"></div>
-      </section>
+          <section class="about home__about">
+            <div class="about__container">
+              <h2 class="section-title about__title">О нас</h2>
+              <div class="about__block1">
+                <h3 class="about__block1-name">Проект «Millennials»</h3>
+                <p class="about__block1-text">
+                  Вдохновлен молодыми идейными людьми, увлеченными творчеством, эмоциями и желанием
+                  сделать мир лучше, проявить себя. У них есть талант и стремление, у нас возможность помочь
+                  им воплотить их мечту в реальность.
+                </p>
+              </div>
+              <div class="about__block2">
+                <picture class="about__picture1">
+                  <img src="/assets/images/about/pic1.jpg" class="about__img" alt="pic1">
+                </picture>
+                <h3 class="about__name">Мы предоставляем площади для вашего мероприятия</h3>
+                <picture class="about__picture2">
+                  <img src="/assets/images/about/pic2.jpg" class="about__img" alt="pic2">
+                </picture>
+                <p class="about__text">
+                  И оказываем помощь с организацией, если вам это нужно.
+                  цель: вовлечь в культурную жизнь города как можно больше людей, помочь молодым
+                  ребятам сделать первые шаги к своей мечте и рассказать всем о том, что их волнует.
+                </p>
+              </div>
+            </div>
 
-      <section class="style-section event home__event">
-        <h2 class="event__section-title section-title">МЕРОПРИЯТИЯ</h2>
-        <div class="event__container"></div>
-      </section>
+          </section>
 
-      <section class="style-section blog home__blog">
-        <h2 class="blog__section-title section-title">БЛОГ</h2>
-        <div class="blog__container"></div>
-      </section>
+          <section class="upcoming home__upcoming">
+            <div class="upcoming__wrapper">
+              <div class="upcoming__container">
+                <h2 class="upcoming__title section-title">
+                  Мероприятия
+                </h2>
+                <div class="upcoming__swiper swiper swiper--3s js-swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <article class="events-card ">
+                        <a href="@@ref" class="events-card__link">
+                          <picture class="events-card__picture">
+                            <source type="image/webp" srcset="assets/images/events/Nirvana.webp" />
+                            <img src="assets/images/events/Nirvana.jpg" class="events-card__img" alt="Nirvana" />
+                          </picture>
 
-      <section class="style-section contacts home__contacts">
-        <h2 class="contacts__section-title section-title">КОНТАКТЫ </h2>
-        <div class="contacts__container"></div>
-      </section>
+                          <h4 class="events-card__title">Собираемся и слушаем альбом Nirvana. Nirvana</h4>
 
+                          <p class="events-card__description">Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный материал.</p>
 
-      <div class="text"></div>
+                          <time datetime="2024-12-07T18:00" class="events-card__time">07.12.2024 | начало 18.00</time>
+                        </a>
+                      </article>
+                    </div>
+                    <div class="swiper-slide">
+                      <article class="events-card ">
+                        <a href="@@ref" class="events-card__link">
+                          <picture class="events-card__picture">
+                            <source type="image/webp" srcset="assets/images/events/HowStuffWorks.webp" />
+                            <img src="assets/images/events/HowStuffWorks.jpg" class="events-card__img" alt="HowStuffWorks" />
+                          </picture>
+
+                          <h4 class="events-card__title">Есть тема, нужно обсудить с HowStuffWorks</h4>
+
+                          <p class="events-card__description">Один из самых популярных подкастов в мире. В нём авторы объясняют, как устроены разные вещи.</p>
+
+                          <time datetime="2024-12-14T18:30" class="events-card__time">14.12.2024 | начало 18.30</time>
+                        </a>
+                      </article>
+                    </div>
+                    <div class="swiper-slide">
+                      <article class="events-card ">
+                        <a href="@@ref" class="events-card__link">
+                          <picture class="events-card__picture">
+                            <source type="image/webp" srcset="assets/images/events/TheBestOfSade.webp" />
+                            <img src="assets/images/events/TheBestOfSade.jpg" class="events-card__img" alt="TheBestOfSade" />
+                          </picture>
+
+                          <h4 class="events-card__title">Вечер | The Best of Sade</h4>
+
+                          <p class="events-card__description">Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, ритм-блюза и фанка.</p>
+
+                          <time datetime="2024-12-16T20:00" class="events-card__time">16.12.2024 | начало 20.00</time>
+                        </a>
+                      </article>
+                    </div>
+                    <div class="swiper-slide">
+                      <article class="events-card ">
+                        <a href="@@ref" class="events-card__link">
+                          <picture class="events-card__picture">
+                            <source type="image/webp" srcset="assets/images/events/Exhibition.webp" />
+                            <img src="assets/images/events/Exhibition.jpg" class="events-card__img" alt="Exhibition" />
+                          </picture>
+
+                          <h4 class="events-card__title">Выставка Малевича в Томске</h4>
+
+                          <p class="events-card__description">Это будет самая полная выставка с 1988 года, того времени, когда впервые заговорили о Малевиче. Экспозиция займёт два этажа павильона.</p>
+
+                          <time datetime="2024-12-23T20:00" class="events-card__time">23.12.2024 | начало 20.00</time>
+                        </a>
+                      </article>
+                    </div>
+                    <div class="swiper-slide">
+                      <article class="events-card ">
+                        <a href="@@ref" class="events-card__link">
+                          <picture class="events-card__picture">
+                            <source type="image/webp" srcset="assets/images/events/Tatler.webp" />
+                            <img src="assets/images/events/Tatler.jpg" class="events-card__img" alt="Tatler" />
+                          </picture>
+
+                          <h4 class="events-card__title">Мастер — класс по студийной съемке от Tatler</h4>
+
+                          <p class="events-card__description">Фотографы издания расскажут, как им удается создавать потрясающие кадры и что может испортить весь процесс.</p>
+
+                          <time datetime="2024-12-25T13:00" class="events-card__time">25.12.2024 | начало 13.00</time>
+                        </a>
+                      </article>
+                    </div>
+                    <div class="swiper-slide">
+                      <article class="events-card ">
+                        <a href="@@ref" class="events-card__link">
+                          <picture class="events-card__picture">
+                            <source type="image/webp" srcset="assets/images/events/TheHatters.webp" />
+                            <img src="assets/images/events/TheHatters.jpg" class="events-card__img" alt="TheHatters" />
+                          </picture>
+
+                          <h4 class="events-card__title">Повесилимся на славу на концерте The Hatters</h4>
+
+                          <p class="events-card__description">Российская джипси-фолк-рок группа, основанная в 2016 году в Санкт-Петербурге. В основной состав группы входят Юрий Музыченко</p>
+
+                          <time datetime="2024-12-27T10:00" class="events-card__time">27.12.2024 | начало 10.00</time>
+                        </a>
+                      </article>
+                    </div>
+                  </div>
+                  <footer class="swiper-footer">
+                    <button type="button" class="swiper-arrow-prev arrow arrow--left">
+                      <svg class="arrow__icon" width="91" height="60">
+                        <use xlink:href="assets/icons/arrow.svg"></use>
+                      </svg>
+                    </button>
+                    <div class="swiper-pagination"></div>
+                    <button type="button" class="swiper-arrow-next arrow">
+                      <svg class="arrow__icon" width="91" height="60">
+                        <use xlink:href="assets/icons/arrow.svg"></use>
+                      </svg>
+                    </button>
+                  </footer>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="listing home__listing">
+            <h2 class="section-title listing__title">Блог</h2>
+            <div class="listing__article-list">
+              <article class="article-card ">
+                <a href="#" class="article-card__link">
+                  <picture class="article-card__picture">
+                    <source type="image/webp" media="(max-width: 450px)" srcset="/assets/images/blog/photoshoot.webp" />
+                    <source media="(max-width: 450px)" srcset="/assets/images/blog/photoshoot.jpg" />
+                    <source type="image/webp" media="(max-width: 1169px)" srcset="/assets/images/blog/photoshoot_tablet.webp" />
+                    <source media="(max-width: 1169px)" srcset="/assets/images/blog/photoshoot_tablet.jpg" />
+                    <source type="image/webp" srcset="/assets/images/blog/photoshoot.webp" />
+                    <img src="/assets/images/blog/photoshoot.jpg" alt="@alt" class="article-card__img">
+                  </picture>
+                </a>
+                <div class="article-card__info">
+                  <time datetime="26.11.2024" class="article-card__time">
+                    26.11.2024
+                  </time>
+
+                  <a href="#" class="article-card__title-link">
+                    <h4 class="article-card__title">Фотосессия в стенах Театра драмы</h4>
+                    <span class="article-card__arrow arrow">
+                      <svg class="article-card__arrow-icon" width="91" height="60">
+                        <use xlink:href="assets/icons/arrow.svg"></use>
+                      </svg>
+                    </span>
+                  </a>
+                  <p class="article-card__description">
+                    Организовывая фотосессию для локального бренда одежды мы смогли воплотить все пожелания заказчика и у нас получилась отличная работа. Смотрите как это было
+                  </p>
+                </div>
+              </article>
+              <article class="article-card ">
+                <a href="#" class="article-card__link">
+                  <picture class="article-card__picture">
+                    <source type="image/webp" media="(max-width: 450px)" srcset="/assets/images/blog/ExhibitionVR.webp" />
+                    <source media="(max-width: 450px)" srcset="/assets/images/blog/ExhibitionVR.jpg" />
+                    <source type="image/webp" media="(max-width: 1169px)" srcset="/assets/images/blog/ExhibitionVR_tablet.webp" />
+                    <source media="(max-width: 1169px)" srcset="/assets/images/blog/ExhibitionVR_tablet.jpg" />
+                    <source type="image/webp" srcset="/assets/images/blog/ExhibitionVR.webp" />
+                    <img src="/assets/images/blog/ExhibitionVR.jpg" alt="@alt" class="article-card__img">
+                  </picture>
+                </a>
+                <div class="article-card__info">
+                  <time datetime="05.11.2024" class="article-card__time">
+                    05.11.2024
+                  </time>
+
+                  <a href="#" class="article-card__title-link">
+                    <h4 class="article-card__title">Выставка VR в Томске</h4>
+                    <span class="article-card__arrow arrow">
+                      <svg class="article-card__arrow-icon" width="91" height="60">
+                        <use xlink:href="assets/icons/arrow.svg"></use>
+                      </svg>
+                    </span>
+                  </a>
+                  <p class="article-card__description">
+                    Клуб виртуальной реальности - это другие миры. яркие эмоции. новый опыт. ... Мы предоставляем нашим клиентам лучший игровой VR-опыт в Томске.
+                  </p>
+                </div>
+              </article>
+              <article class="article-card ">
+                <a href="#" class="article-card__link">
+                  <picture class="article-card__picture">
+                    <source type="image/webp" media="(max-width: 450px)" srcset="/assets/images/blog/rocking_radio.webp" />
+                    <source media="(max-width: 450px)" srcset="/assets/images/blog/rocking_radio.jpg" />
+                    <source type="image/webp" media="(max-width: 1169px)" srcset="/assets/images/blog/rocking_radio_tablet.webp" />
+                    <source media="(max-width: 1169px)" srcset="/assets/images/blog/rocking_radio_tablet.jpg" />
+                    <source type="image/webp" srcset="/assets/images/blog/rocking_radio.webp" />
+                    <img src="/assets/images/blog/rocking_radio.jpg" alt="@alt" class="article-card__img">
+                  </picture>
+                </a>
+                <div class="article-card__info">
+                  <time datetime="01.11.2024" class="article-card__time">
+                    01.11.2024
+                  </time>
+
+                  <a href="#" class="article-card__title-link">
+                    <h4 class="article-card__title">Rocking radio в заброшенном ангаре</h4>
+                    <span class="article-card__arrow arrow">
+                      <svg class="article-card__arrow-icon" width="91" height="60">
+                        <use xlink:href="assets/icons/arrow.svg"></use>
+                      </svg>
+                    </span>
+                  </a>
+                  <p class="article-card__description">
+                    15 электрогенераторов, километры проводов и пару тонн света. Все это для того, чтобы организовать лучшую вечеринку года для ребят из Новосибирска.
+                  </p>
+                </div>
+              </article>
+
+            </div>
+            <a href="#" class="listing__link link">Смотреть все</a>
+          </section>
+
+          <section class="contacts home__contacts">
+            <div class="contacts__container">
+              <h2 class="contacts__title section-title">Контакты</h2>
+              <div class="contacts__blocks">
+                <div class="contacts__info ">
+                  <div class="contacts__location">
+                    <svg class="contacts__icon" width="110" height="110">
+                      <use xlink:href="assets/icons/location.svg"></use>
+                    </svg>
+                    <div class="contacts__text">
+                      <h3 class="contacts__name">Томск, Красноармейская 146</h3>
+                      <p class="contacts__content">
+                        2 этаж
+                        <br>оф. 206
+                      </p>
+                    </div>
+                  </div>
+                  <div class="contacts__home">
+                    <svg class="contacts__icon" width="110" height="110">
+                      <use xlink:href="assets/icons/home.svg"></use>
+                    </svg>
+                    <div class="contacts__text">
+                      <h3 class="contacts__name">Отдел аренды</h3>
+                      <p class="contacts__content">
+                        <a href="tel:+73822907256">8 (3822) 90-72-56</a>
+                        <br>
+                        <a href="mailto:idat@tusur.ru">idat@tusur.ru</a>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="contacts__star">
+                    <svg class="contacts__icon" width="110" height="110">
+                      <use xlink:href="assets/icons/star.svg"></use>
+                    </svg>
+                    <div class="contacts__text">
+                      <h3 class="contacts__name">Отдел мероприятий</h3>
+                      <p class="contacts__content">
+                        <a href="tel:+73822907256">8 (3822) 90-72-56</a>
+                        <br>
+                        <a href="mailto:idat@tusur.ru">idat@tusur.ru</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="contacts__wrapper">
+                  <div class="contacts__map" id="js-contactsMap"></div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <p class="mak">Просто делайте, что нравится, а мы вам поможем</p>
+
+          <div class="text"></div>
     </div>
-    <section class="listing home__listing">
-      <h2 class="section-title listing__title">Блог</h2>
-      <div class="listing__article-list">
-        <article class="article-card ">
-          <a href="#" class="article-card__link">
-            <picture class="article-card__picture">
-              <source type="image/webp" media="(max-width: 450px)" srcset="/assets/images/blog/photoshoot.webp" />
-              <source media="(max-width: 450px)" srcset="/assets/images/blog/photoshoot.jpg" />
-              <source type="image/webp" media="(max-width: 1169px)" srcset="/assets/images/blog/photoshoot_tablet.webp" />
-              <source media="(max-width: 1169px)" srcset="/assets/images/blog/photoshoot_tablet.jpg" />
-              <source type="image/webp" srcset="/assets/images/blog/photoshoot.webp" />
-              <img src="/assets/images/blog/photoshoot.jpg" alt="@alt" class="article-card__img">
-            </picture>
-          </a>
-          <div class="article-card__info">
-            <time datetime="26.11.2024" class="article-card__time">
-              26.11.2024
-            </time>
-
-            <a href="#" class="article-card__title-link">
-              <h4 class="article-card__title">Фотосессия в стенах Театра драмы</h4>
-              <span class="article-card__arrow arrow">
-                <svg class="article-card__arrow-icon" width="91" height="60">
-                  <use xlink:href="assets/icons/arrow.svg"></use>
-                </svg>
-              </span>
-            </a>
-            <p class="article-card__description">
-              Организовывая фотосессию для локального бренда одежды мы смогли воплотить все пожелания заказчика и у нас получилась отличная работа. Смотрите как это было
-            </p>
-          </div>
-        </article>
-        <article class="article-card ">
-          <a href="#" class="article-card__link">
-            <picture class="article-card__picture">
-              <source type="image/webp" media="(max-width: 450px)" srcset="/assets/images/blog/ExhibitionVR.webp" />
-              <source media="(max-width: 450px)" srcset="/assets/images/blog/ExhibitionVR.jpg" />
-              <source type="image/webp" media="(max-width: 1169px)" srcset="/assets/images/blog/ExhibitionVR_tablet.webp" />
-              <source media="(max-width: 1169px)" srcset="/assets/images/blog/ExhibitionVR_tablet.jpg" />
-              <source type="image/webp" srcset="/assets/images/blog/ExhibitionVR.webp" />
-              <img src="/assets/images/blog/ExhibitionVR.jpg" alt="@alt" class="article-card__img">
-            </picture>
-          </a>
-          <div class="article-card__info">
-            <time datetime="05.11.2024" class="article-card__time">
-              05.11.2024
-            </time>
-
-            <a href="#" class="article-card__title-link">
-              <h4 class="article-card__title">Выставка VR в Томске</h4>
-              <span class="article-card__arrow arrow">
-                <svg class="article-card__arrow-icon" width="91" height="60">
-                  <use xlink:href="assets/icons/arrow.svg"></use>
-                </svg>
-              </span>
-            </a>
-            <p class="article-card__description">
-              Клуб виртуальной реальности - это другие миры. яркие эмоции. новый опыт. ... Мы предоставляем нашим клиентам лучший игровой VR-опыт в Томске.
-            </p>
-          </div>
-        </article>
-        <article class="article-card ">
-          <a href="#" class="article-card__link">
-            <picture class="article-card__picture">
-              <source type="image/webp" media="(max-width: 450px)" srcset="/assets/images/blog/rocking_radio.webp" />
-              <source media="(max-width: 450px)" srcset="/assets/images/blog/rocking_radio.jpg" />
-              <source type="image/webp" media="(max-width: 1169px)" srcset="/assets/images/blog/rocking_radio_tablet.webp" />
-              <source media="(max-width: 1169px)" srcset="/assets/images/blog/rocking_radio_tablet.jpg" />
-              <source type="image/webp" srcset="/assets/images/blog/rocking_radio.webp" />
-              <img src="/assets/images/blog/rocking_radio.jpg" alt="@alt" class="article-card__img">
-            </picture>
-          </a>
-          <div class="article-card__info">
-            <time datetime="01.11.2024" class="article-card__time">
-              01.11.2024
-            </time>
-
-            <a href="#" class="article-card__title-link">
-              <h4 class="article-card__title">Rocking radio в заброшенном ангаре</h4>
-              <span class="article-card__arrow arrow">
-                <svg class="article-card__arrow-icon" width="91" height="60">
-                  <use xlink:href="assets/icons/arrow.svg"></use>
-                </svg>
-              </span>
-            </a>
-            <p class="article-card__description">
-              15 электрогенераторов, километры проводов и пару тонн света. Все это для того, чтобы организовать лучшую вечеринку года для ребят из Новосибирска.
-            </p>
-          </div>
-        </article>
-
-      </div>
-      <a href="#" class="listing__link link">Смотреть все</a>
-    </section>
   </main>
-  <footer class="page-footer"></footer>
-  <div class="pp" id="eventPP">
+
+  <footer class="page-footer">
+    <div class="page-footer__main">
+      <svg class="page-footer__line" width="618" height="2">
+        <use xlink:href="assets/icons/line.svg"></use>
+      </svg>
+
+      <svg class="page-footer__line page-footer__line--rotate" width="618" height="2">
+        <use xlink:href="assets/icons/line.svg"></use>
+      </svg>
+    </div>
+    <div class="page-footer__body">
+      <div class="page-footer__column">
+        <nav class="page-footer__nav">
+          <ul class="page-footer__links">
+            <li class="page-footer__item">
+              <a href="#" class="page-footer__link">Календарь мероприятий</a>
+            </li>
+            <li class="page-footer__item">
+              <a href="#" class="page-footer__link">Провести мероприятие</a>
+            </li>
+            <li class="page-footer__item">
+              <a href="#" class="page-footer__link">Стать арендатором</a>
+            </li>
+            <li class="page-footer__item">
+              <a href="#" class="page-footer__link">Наши проекты</a>
+            </li>
+            <li class="page-footer__item">
+              <a href="#" class="page-footer__link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <div>
+          <p class="page-footer__Millennials">
+            © Millennials 2025
+          </p>
+          <div class="page-footer__legal">
+            <a href="#" class="page-footer__link">Политика конфиденциальности</a>
+            <a href="#" class="page-footer__link">Cookies</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="page-footer__socials">
+        <a href="#" class="page-footer__icon">
+          <svg width="58" height="58">
+            <use xlink:href="assets/icons/vk1.svg"></use>
+          </svg>
+        </a>
+
+        <a href="#" class="page-footer__icon">
+          <svg width="58" height="58">
+            <use xlink:href="assets/icons/vk2.svg"></use>
+          </svg>
+        </a>
+      </div>
+
+      <form action="https://jsonplaceholder.typicode.com/posts" class="page-footer__subscribe-form subscribe-form" id="js-subscribeForm">
+        <h4 class="subscribe-form__title">
+          Подпишись и будь в курсе происходящего
+        </h4>
+
+        <div class="subscribe-form__wrapper">
+          <div class="subscribe-form__field-wrapper">
+            <input type="email" name="email" placeholder="Email" class="subscribe-form__input" required id="js-subscribeEmail" />
+          </div>
+
+          <button type="submit" class="subscribe-form__submit">
+            Подписаться
+          </button>
+        </div>
+
+        <label class="subscribe-form__check check">
+          <input type="checkbox" name="agree" class="check__input" required checked />
+          <span class="check__mark"></span>
+          <span class="check__label check__label--s">
+            Согласен на обработку персональных данных
+          </span>
+        </label>
+        <div class="page-footer__dignity">
+          <a href="#" class="page-footer__dignity--link">
+            <span>Создание и продвижение</span>
+            <svg class="page-footer__dignity--logo" width="80" height="36">
+              <use xlink:href="assets/icons/dignity.svg"></use>
+            </svg>
+          </a>
+        </div>
+      </form>
+    </div>
+  </footer>
+
+  <div class="pp" id="js-eventPP">
     <div class="pp__wrapper">
       <div class="pp__sticky-close">
-        <button type="button" class="pp__x-btn x-btn">
+        <button type="button" title="Закрыть" class="pp__x-btn x-btn js-ppCloseBtn">
           <svg class="x-btn__icon" width="24" height="24">
             <use xlink:href="assets/icons/fi_x.svg"></use>
           </svg>
@@ -200,13 +517,14 @@
         <h2 class="pp__title">Заполните форму
           <br />и мы подберем площадку
         </h2>
-        <form class="form pp__form">
 
+        <form class="form pp__form" id="js-eventForm">
           <div class="form__list">
             <div class="field form__field form__field--w50">
               <h5 class="field__title">
                 Формат мероприятия:
               </h5>
+
               <div class="radio field__radio">
                 <label class="radio__item">
                   <input class="radio__input" type="radio" name="format" value="seminar" checked />
@@ -234,24 +552,26 @@
             <div class="form__group form__group--w50">
               <label class="form__field field">
                 <span class="field__title">Планируемое количество посетителей:</span>
-                <select class="field__select" name="amount">
+                <select class="field__select js-selectric" name="amount">
                   <option value="20">до 20 человек</option>
                   <option value="100">от 20 до 100 человек</option>
                   <option value="500">от 100 до 500 человек</option>
                   <option value="1000">более 500 человек</option>
                 </select>
               </label>
-              <div class="field form__field form__field--m0">
+              <div class="field form__field form__field--m0 js-dateField">
                 <h5 class="field__title">
                   Дата проведения:
                 </h5>
                 <div class="field__date">
                   <div class="field__date-inputs">
-                    <input class="field__date-input" type="text" placeholder="ДД" />
-                    <input class="field__date-input" type="text" placeholder="ММ" />
-                    <input class="field__date-input field__date-input--year" type="text" placeholder="ГГГГ" />
-
+                    <input class="field__date-input js-dateDay" type="text" placeholder="ДД" readonly />
+                    <input class="field__date-input js-dateMonth" type="text" placeholder="ММ" readonly />
+                    <input class="field__date-input field__date-input--year js-dateYear" type="text" placeholder="ГГГГ" readonly />
                   </div>
+
+                  <input class="field__date-picker js-dateInput" type="text" name="date" readonly required />
+
                 </div>
               </div>
             </div>
@@ -271,7 +591,7 @@
             </label>
             <label class="field form__field form__field--w50">
               <span class="field__label">Телефон*</span>
-              <input class="field__input" type="tel" placeholder="Телефон" name="phone" required />
+              <input class="field__input js-mobileMask" type="tel" placeholder="Телефон" name="phone" required />
             </label>
             <label class="field form__field form__field--w50">
               <span class="field__label">Email*</span>
@@ -292,12 +612,24 @@
 
           <div class="form__btns">
             <button type="submit" class="button form__submit">Отправить</button>
-            <button type="button" class="form__close-btn">Закрыть</button>
+            <button type="button" class="form__close-btn js-ppCloseBtn">Закрыть</button>
           </div>
         </form>
       </div>
     </div>
   </div>
+  <script src="scripts/jquery-3.7.1.min.js"></script>
+
+  <script src="scripts/jquery.selectric.js"></script>
+  <script src="scripts/jquery.mask.js"></script>
+  <script src="scripts/air-datepicker.js"></script>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key="></script>
+
+  <script src="scripts/jquery.validate.js"></script>
+  <script src="scripts/jquery.validate-init.js"></script>
+
+  <script src="scripts/swiper.min.js"></script>
   <script src="scripts/main.min.js"></script>
 </body>
 

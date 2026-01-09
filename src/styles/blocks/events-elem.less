@@ -1,0 +1,49 @@
+.events-elem{
+    &__blocks {
+        display: flex;             
+        justify-content: space-between; 
+        gap: 66px;                 
+        width: 100%;   
+    }
+    &__information,
+    &__contact,
+    &__handshake {
+        display: flex;
+        flex-direction: column;      
+        align-items: center;         
+        text-align: center;          
+        max-width: 400px;           
+    }
+    &__name{
+        margin: 40px 0 10px;
+        font-family: @font1;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 1.35;
+        color: @black;
+    }
+    &__content{
+        margin: 0;
+        text-decoration: none;
+        font-family: @font1;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.375;
+        color: @black;
+        a {
+            text-decoration: none;      
+            color: inherit;             
+            transition: text-decoration 0.2s;
+
+            &:hover {
+                text-decoration: underline; // появляется при наведении
+            }
+        }
+    }
+    &__container{
+        .container();
+        padding-top: 100px;
+        display: flex;
+        flex-direction: column;
+    }
+}

@@ -11,6 +11,9 @@
     overflow-y: auto;
     z-index: 110;
     display: none;
+    &--active{
+        display: block;
+    }
     &__wrapper{
         box-sizing: border-box;
         position: relative;
@@ -26,7 +29,7 @@
         background-repeat: repeat, repeat-y;
     }
     &__sticky-close{
-        position: sticky;
+        position: absolute;
         top: 0;
         align-self: flex-end;
         width: 0;
@@ -60,4 +63,5 @@
         letter-spacing: 0.02em;
         z-index: 1;
     }
+
 }

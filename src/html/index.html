@@ -6,53 +6,42 @@
         @@include('blocks/page-header.html')
             <main class="main">
                 <div class="home">
-                    <header class="main__header home__main-header">
-                        <h1>АРТ-ПРОСТРАНСТВО</h1>
-                        <img 
-                        src="assets/LENNI.svg"
-                        class="page-LENNI"
-                        alt="LENNI"
-                        />
                 
-                        <p>ДЛЯ ЛЮДЕЙ, ГОРЯЩИХ СЕРДЦЕМ И ДЕЛОМ
-                            МЕСТО ДЛЯ НАСТОЯЩЕГО</p>
-                    </header>
+                    @@include('blocks/main-header.html', {"class": "home__main-header"})
 
-                    <section class="offers home__offers">
-                        <h4 class="offers__title">Я ХОЧУ:<h4>
-                        <div class="offers__buttons">
-                            <button class="offers__button button button-red" type="button">Провести мероприятие</button>
-                            <button class="offers__button button" type="button">Cтать арендатором</button>
-                        </div>
-                    </section>
+                    @@include('blocks/offers.html')
+                    
+                    @@include('blocks/about.html', {"class": "home__about"})
 
-                    <section class=" style-section about home__about">
-                        <h2 class="about__section-title section-title">О НАС</h2>
-                        <div class="about__container"></div>
-                    </section>
+                    @@include('blocks/upcoming.html', {"class": "home__upcoming"})
 
-                    <section class="style-section event home__event">
-                        <h2 class="event__section-title section-title">МЕРОПРИЯТИЯ</h2>
-                        <div class="event__container"></div>
-                    </section>
+                    @@include('blocks/blog-listing.html', {"class": "home__listing"})
 
-                    <section class="style-section blog home__blog">
-                        <h2 class="blog__section-title section-title">БЛОГ</h2>
-                        <div class="blog__container"></div>
-                    </section>
+                    @@include('blocks/contacts.html', {"class": "home__contacts"})
 
-                    <section class="style-section contacts home__contacts">
-                        <h2 class="contacts__section-title section-title">КОНТАКТЫ </h2>
-                        <div class="contacts__container"></div>
-                    </section>
+                    <p class="mak">Просто делайте, что нравится, а мы вам поможем</p>
                 
-
                     <div class="text"></div>
                 </div>
-                @@include('blocks/blog-listing.html', {"class": "home__listing"})
             </main>
+
         @@include('blocks/page-footer.html')
+
         @@include('blocks/event-pp.html')
+        <script src="scripts/jquery-3.7.1.min.js"></script>
+
+        <script src="scripts/jquery.selectric.js"></script>
+        <script src="scripts/jquery.mask.js"></script>
+        <script src="scripts/air-datepicker.js"></script>
+
+        <script
+            src="https://maps.googleapis.com/maps/api/js?key="
+        ></script>
+
+        <script src="scripts/jquery.validate.js"></script>
+        <script src="scripts/jquery.validate-init.js"></script>
+
+        <script src="scripts/swiper.min.js"></script>
         <script src="scripts/main.min.js"></script>
     </body>
 </html>
