@@ -61,23 +61,23 @@
         <a class="page-header__nav-link" href="#">Блог</a>
         <a class="page-header__nav-link" href="#">О нас</a>
         <a class="page-header__nav-link" href="#">Контакты</a>
+      </nav>
 
-        <div class="page-header__nav-user">
+      <div class="page-header__right-block">
+        <div class="page-header__nav-user" id="js-userBlock">
           <a href="#" class="page-header__nav-user-link">
             Александр С.
           </a>
-          <a href="#" class="page-header__nav-logout">
+          <a href="#" class="page-header__nav-logout" id="js-logoutBtn">
             <svg class="page-header__nav-logout-icon" width="24" height="24">
-              <use xlink:href="assets/icons/log-in.svg"></use>
+              <use xlink:href="assets/icons/symbols.svg#log-in"></use>
             </svg>
           </a>
         </div>
-      </nav>
-      <div class="page-header__right-block">
-        <a href="#" class="page-header__user-btn button">
+        <a href="#" class="page-header__user-btn button" id="js-loginBtn">
           Войти
           <svg class="page-header__user-icon" width="21" height="18">
-            <use xlink:href="assets/icons/user.svg"></use>
+            <use xlink:href="assets/icons/symbols.svg#user"></use>
           </svg>
         </a>
         <button type="button" class="page-header__nav-toggle" id="js-navToggle"></button>
@@ -86,13 +86,18 @@
     </div>
   </header>
   <main class="main">
-    <div class="events">
+    <div class="event">
+      <nav class="navigation" aria-label="navigation">
+        <a href="/" class="navigation__link">Главная</a>
+        <span class="navigation__separator">/</span>
+        <span class="navigation__current">Мероприятия</span>
+      </nav>
       <section class="listing events__listing">
         <h2 class="listing__title section-title">Мероприятия</h2>
 
         <div class="listing__events-list">
           <article class="events-card listing__event-card">
-            <a href="@@ref" class="events-card__link">
+            <a href="/event.html" class="events-card__link">
               <picture class="events-card__picture">
                 <source type="image/webp" srcset="assets/images/events/Nirvana.webp" />
                 <img src="assets/images/events/Nirvana.jpg" class="events-card__img" alt="Nirvana" />
@@ -106,7 +111,7 @@
             </a>
           </article>
           <article class="events-card listing__event-card">
-            <a href="@@ref" class="events-card__link">
+            <a href="/event.html" class="events-card__link">
               <picture class="events-card__picture">
                 <source type="image/webp" srcset="assets/images/events/HowStuffWorks.webp" />
                 <img src="assets/images/events/HowStuffWorks.jpg" class="events-card__img" alt="HowStuffWorks" />
@@ -120,7 +125,7 @@
             </a>
           </article>
           <article class="events-card listing__event-card">
-            <a href="@@ref" class="events-card__link">
+            <a href="/event.html" class="events-card__link">
               <picture class="events-card__picture">
                 <source type="image/webp" srcset="assets/images/events/TheBestOfSade.webp" />
                 <img src="assets/images/events/TheBestOfSade.jpg" class="events-card__img" alt="TheBestOfSade" />
@@ -134,7 +139,7 @@
             </a>
           </article>
           <article class="events-card listing__event-card">
-            <a href="@@ref" class="events-card__link">
+            <a href="/event.html" class="events-card__link">
               <picture class="events-card__picture">
                 <source type="image/webp" srcset="assets/images/events/Exhibition.webp" />
                 <img src="assets/images/events/Exhibition.jpg" class="events-card__img" alt="Exhibition" />
@@ -148,7 +153,7 @@
             </a>
           </article>
           <article class="events-card listing__event-card">
-            <a href="@@ref" class="events-card__link">
+            <a href="/event.html" class="events-card__link">
               <picture class="events-card__picture">
                 <source type="image/webp" srcset="assets/images/events/Tatler.webp" />
                 <img src="assets/images/events/Tatler.jpg" class="events-card__img" alt="Tatler" />
@@ -162,7 +167,7 @@
             </a>
           </article>
           <article class="events-card listing__event-card">
-            <a href="@@ref" class="events-card__link">
+            <a href="/event.html" class="events-card__link">
               <picture class="events-card__picture">
                 <source type="image/webp" srcset="assets/images/events/TheHatters.webp" />
                 <img src="assets/images/events/TheHatters.jpg" class="events-card__img" alt="TheHatters" />
@@ -175,6 +180,15 @@
               <time datetime="2024-12-27T10:00" class="events-card__time">27.12.2024 | начало 10.00</time>
             </a>
           </article>
+          <a href="#" class="more">
+            <p class="more__text">Показать ещё</p>
+
+            <svg class="more__arrow-icon more__icon" width="60" height="91">
+              <use xlink:href="assets/icons/symbols.svg#arrow-rotate"></use>
+            </svg>
+
+          </a>
+
           <section class="table @@class">
             <h2 class="section-title section-title--font22 table__title">Дополнительные услуги</h2>
             <p class="table__p">
@@ -300,22 +314,24 @@
         <div class="events-elem__container">
           <div class="events-elem__blocks">
             <div class="events-elem__information">
-              <svg class="events-elem__icon" width="110" height="110">
-                <use xlink:href="assets/icons/information.svg"></use>
-              </svg>
+              <div class="contacts__squre">
+                <svg class="contacts__logo" width="24" height="24">
+                  <use xlink:href="assets/icons/symbols.svg#information"></use>
+                </svg>
+              </div>
               <div class="events-elem__text">
                 <h3 class="events-elem__name">Цены</h3>
                 <p class="events-elem__content">
-                  Цены, указанные на сайте носят
-                  <br>информационный характер. Мы придерживаемся
-                  <br>индивидуального подхода в работе с клиентом.
+                  Цены, указанные на сайте носят информационный характер. Мы придерживаемся индивидуального подхода в работе с клиентом.
                 </p>
               </div>
             </div>
             <div class="events-elem__contact">
-              <svg class="events-elem__icon" width="110" height="110">
-                <use xlink:href="assets/icons/contact.svg"></use>
-              </svg>
+              <div class="contacts__squre">
+                <svg class="contacts__logo" width="24" height="24">
+                  <use xlink:href="assets/icons/symbols.svg#contact"></use>
+                </svg>
+              </div>
               <div class="events-elem__text">
                 <h3 class="events-elem__name">Контакты</h3>
                 <p class="events-elem__content">
@@ -328,15 +344,15 @@
               </div>
             </div>
             <div class="events-elem__handshake">
-              <svg class="events-elem__icon" width="110" height="110">
-                <use xlink:href="assets/icons/handshake.svg"></use>
-              </svg>
+              <div class="contacts__squre">
+                <svg class="contacts__logo" width="24" height="24">
+                  <use xlink:href="assets/icons/symbols.svg#handshake"></use>
+                </svg>
+              </div>
               <div class="events-elem__text">
                 <h3 class="events-elem__name">Преимущество</h3>
                 <p class="events-elem__content">
-                  Мы имеем все возможности для того, чтобы
-                  <br>помочь как малому бизнесу и молодым талантам,
-                  <br>так и большим корпорациям и холдингам.
+                  Мы имеем все возможности для того, чтобы помочь как малому бизнесу и молодым талантам, так и большим корпорациям и холдингам.
                 </p>
               </div>
             </div>
@@ -347,36 +363,63 @@
   </main>
   <footer class="page-footer">
     <div class="page-footer__main">
-      <svg class="page-footer__line" width="618" height="2">
-        <use xlink:href="assets/icons/line.svg"></use>
-      </svg>
-
-      <svg class="page-footer__line page-footer__line--rotate" width="618" height="2">
-        <use xlink:href="assets/icons/line.svg"></use>
-      </svg>
+      <div class="page-footer__line"></div>
+      <div class="page-footer__line page-footer__line--rotate"></div>
     </div>
     <div class="page-footer__body">
-      <div class="page-footer__column">
-        <nav class="page-footer__nav">
-          <ul class="page-footer__links">
-            <li class="page-footer__item">
-              <a href="#" class="page-footer__link">Календарь мероприятий</a>
-            </li>
-            <li class="page-footer__item">
-              <a href="#" class="page-footer__link">Провести мероприятие</a>
-            </li>
-            <li class="page-footer__item">
-              <a href="#" class="page-footer__link">Стать арендатором</a>
-            </li>
-            <li class="page-footer__item">
-              <a href="#" class="page-footer__link">Наши проекты</a>
-            </li>
-            <li class="page-footer__item">
-              <a href="#" class="page-footer__link">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-        <div>
+      <div class="page-footer__content">
+        <div class="page-footer__column">
+          <nav class="page-footer__nav">
+            <ul class="page-footer__links">
+              <li class="page-footer__item">
+                <a href="#" class="page-footer__link">Календарь мероприятий</a>
+              </li>
+              <li class="page-footer__item">
+                <a href="#" class="page-footer__link">Провести мероприятие</a>
+              </li>
+              <li class="page-footer__item">
+                <a href="#" class="page-footer__link">Стать арендатором</a>
+              </li>
+              <li class="page-footer__item">
+                <a href="#" class="page-footer__link">Наши проекты</a>
+              </li>
+              <li class="page-footer__item">
+                <a href="#" class="page-footer__link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+
+        </div>
+
+
+
+        <form action="https://jsonplaceholder.typicode.com/posts" class="page-footer__subscribe-form subscribe-form" id="js-subscribeForm">
+          <h4 class="subscribe-form__title">
+            Подпишись и будь в курсе происходящего
+          </h4>
+
+          <div class="subscribe-form__wrapper">
+            <div class="subscribe-form__field-wrapper">
+              <input type="email" name="email" placeholder="Email" class="subscribe-form__input" required id="js-subscribeEmail" />
+            </div>
+
+            <button type="submit" class="subscribe-form__submit">
+              Подписаться
+            </button>
+          </div>
+
+          <label class="subscribe-form__check check">
+            <input type="checkbox" name="agree" class="check__input" required checked />
+            <span class="check__mark"></span>
+            <span class="check__label check__label--s">
+              Согласен на обработку персональных данных
+            </span>
+          </label>
+        </form>
+      </div>
+
+      <div class="page-footer__info">
+        <div class="page-footer__copyright">
           <p class="page-footer__Millennials">
             © Millennials 2025
           </p>
@@ -385,53 +428,29 @@
             <a href="#" class="page-footer__link">Cookies</a>
           </div>
         </div>
-      </div>
+        <div class="page-footer__socials">
+          <a href="#" class="page-footer__icon">
+            <svg width="58" height="58">
+              <use xlink:href="assets/icons/symbols.svg#vk1"></use>
+            </svg>
+          </a>
 
-      <div class="page-footer__socials">
-        <a href="#" class="page-footer__icon">
-          <svg width="58" height="58">
-            <use xlink:href="assets/icons/vk1.svg"></use>
-          </svg>
-        </a>
-
-        <a href="#" class="page-footer__icon">
-          <svg width="58" height="58">
-            <use xlink:href="assets/icons/vk2.svg"></use>
-          </svg>
-        </a>
-      </div>
-
-      <form action="https://jsonplaceholder.typicode.com/posts" class="page-footer__subscribe-form subscribe-form" id="js-subscribeForm">
-        <h4 class="subscribe-form__title">
-          Подпишись и будь в курсе происходящего
-        </h4>
-
-        <div class="subscribe-form__wrapper">
-          <div class="subscribe-form__field-wrapper">
-            <input type="email" name="email" placeholder="Email" class="subscribe-form__input" required id="js-subscribeEmail" />
-          </div>
-
-          <button type="submit" class="subscribe-form__submit">
-            Подписаться
-          </button>
+          <a href="#" class="page-footer__icon">
+            <svg width="58" height="58">
+              <use xlink:href="assets/icons/symbols.svg#vk1"></use>
+            </svg>
+          </a>
         </div>
-
-        <label class="subscribe-form__check check">
-          <input type="checkbox" name="agree" class="check__input" required checked />
-          <span class="check__mark"></span>
-          <span class="check__label check__label--s">
-            Согласен на обработку персональных данных
-          </span>
-        </label>
         <div class="page-footer__dignity">
           <a href="#" class="page-footer__dignity--link">
             <span>Создание и продвижение</span>
             <svg class="page-footer__dignity--logo" width="80" height="36">
-              <use xlink:href="assets/icons/dignity.svg"></use>
+              <use xlink:href="assets/icons/symbols.svg#dignity"></use>
             </svg>
           </a>
         </div>
-      </form>
+      </div>
+
     </div>
   </footer>
   <div class="pp" id="js-eventPP">
@@ -439,7 +458,7 @@
       <div class="pp__sticky-close">
         <button type="button" title="Закрыть" class="pp__x-btn x-btn js-ppCloseBtn">
           <svg class="x-btn__icon" width="24" height="24">
-            <use xlink:href="assets/icons/fi_x.svg"></use>
+            <use xlink:href="assets/icons/symbols.svg#fi_x"></use>
           </svg>
         </button>
       </div>

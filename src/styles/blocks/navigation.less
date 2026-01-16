@@ -1,0 +1,37 @@
+.navigation {
+    .container();
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    margin: 40px 0;
+    gap: 6px;
+    font-family: @font1;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.375;
+    color: @black;
+    @media @bw1340 {
+        padding: 0;
+        font-size: 14px;
+        line-height: 1.357;
+    }
+    @media @bw768 {
+        display: none;
+    }
+    &__link {
+        color: @black;
+        text-decoration: none;
+        transition: color 0.2s ease;
+        &:hover{
+            color: @red;
+        }
+    }
+    &__separator {
+        color: @black;
+    }
+    &__current {
+        color:@black;
+    }
+
+}
+

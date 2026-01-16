@@ -20,5 +20,31 @@
         font-size: 22px;
         line-height: 1.36;
         font-weight: 400;
+        @media @bw768 {
+            font-size: 16px;
+            line-height: 1.25;
+            font-weight: 500;
+        }
+    }
+    @media @bw1660 {
+        max-width: 604px;
+        margin: 0 auto 130px;
+        padding-left: 72px;
+        padding-right: 72px;
+    }
+    @media @bw1340 {
+        max-width: 566px;
+        margin: 0 auto 100px;
+        padding: 10px 40px;
+        font-size: 24px;
+        line-height: 1.29;
+    }
+    @media @bw768 {
+        max-width: 280px;
+        min-height: 42px;
+        margin: 0 auto 80px;
+        padding: 11px 19px;
+        font-size: 16px;
+        line-height: 1.25;
     }
 }

@@ -89,7 +89,7 @@
     }
   }
   &__nav-link,
-  &__nav-user-link {
+  &__nav-logout {
     color: @black;
     text-decoration: none;
     &:hover {
@@ -111,10 +111,11 @@
   }
   &__nav-user {
     display: none;
-    @media @bw1020 {
+     &.is-active {
       display: flex;
+    }
+    @media @bw1020 {
       align-items: center;
-      margin-top: 20px;
     }
   }
   &__nav-user-link {
@@ -122,6 +123,8 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
+    text-decoration: none;
+    color: @black;
   }
   &__nav-logout {
     width: 24px;
@@ -160,6 +163,9 @@
     transition: color 0.2s, background-color 0.2s, border-color 0.2s;
     overflow: hidden;
     cursor: pointer;
+    &.is-hidden {
+      display: none;
+    }
     @media @bw1020 {
       display: flex;
       width: 40px;
@@ -169,6 +175,10 @@
       background: none;
       color: @black;
       font-size: 0;
+    }
+    @media @bw768 {
+        font-size: 0;
+        padding: 0;
     }
     &:hover {
       background-color: @black;
@@ -182,6 +192,10 @@
   &__user-icon {
     display: none;
     @media @bw1020 {
+      display: block;
+      margin: auto;
+    }
+    @media @bw768 {
       display: block;
       margin: auto;
     }

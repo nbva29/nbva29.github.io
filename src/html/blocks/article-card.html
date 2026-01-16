@@ -1,6 +1,8 @@
 <article class="article-card @@class"> 
     <a href="#" class="article-card__link">
         <picture class="article-card__picture">
+            <source type="image/webp" media="(max-width: 320px)" srcset="@@img_phone_webp"/>
+            <source media="(max-width: 320px)" srcset="@@img_phone"/>
             <source type="image/webp" media="(max-width: 450px)" srcset="@@img_webp"/>
             <source media="(max-width: 450px)" srcset="@@img"/>
             <source type="image/webp" media="(max-width: 1169px)" srcset="@@img_tablet_webp"/>
@@ -16,11 +18,9 @@
 
         <a href="#" class="article-card__title-link">
             <h4 class="article-card__title">@@title</h4>
-            <span class="article-card__arrow arrow">
-                <svg class="article-card__arrow-icon" width="91" height="60">
-                    <use xlink:href="assets/icons/arrow.svg"></use>
-                </svg>
-            </span>
+            <svg class="article-card__arrow arrow" width="91" height="60">
+                <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+            </svg>
         </a>
         <p class="article-card__description">
             @@description

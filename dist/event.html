@@ -61,23 +61,23 @@
          <a class="page-header__nav-link" href="#">Блог</a>
          <a class="page-header__nav-link" href="#">О нас</a>
          <a class="page-header__nav-link" href="#">Контакты</a>
+       </nav>
 
-         <div class="page-header__nav-user">
+       <div class="page-header__right-block">
+         <div class="page-header__nav-user" id="js-userBlock">
            <a href="#" class="page-header__nav-user-link">
              Александр С.
            </a>
-           <a href="#" class="page-header__nav-logout">
+           <a href="#" class="page-header__nav-logout" id="js-logoutBtn">
              <svg class="page-header__nav-logout-icon" width="24" height="24">
-               <use xlink:href="assets/icons/log-in.svg"></use>
+               <use xlink:href="assets/icons/symbols.svg#log-in"></use>
              </svg>
            </a>
          </div>
-       </nav>
-       <div class="page-header__right-block">
-         <a href="#" class="page-header__user-btn button">
+         <a href="#" class="page-header__user-btn button" id="js-loginBtn">
            Войти
            <svg class="page-header__user-icon" width="21" height="18">
-             <use xlink:href="assets/icons/user.svg"></use>
+             <use xlink:href="assets/icons/symbols.svg#user"></use>
            </svg>
          </a>
          <button type="button" class="page-header__nav-toggle" id="js-navToggle"></button>
@@ -88,15 +88,44 @@
 
    <main class="main">
      <article class="event">
+       <nav class="navigation" aria-label="navigation">
+         <a href="/" class="navigation__link">Главная</a>
+         <span class="navigation__separator">/</span>
+         <a href="/events.html" class="navigation__link">Мероприятия</a>
+         <span class="navigation__separator">/</span>
+         <span class="navigation__current">Вечер | The Best of Sade</span>
+       </nav>
        <article class="event-info ">
-         <picture class="event-info__picture">
-           <source type="image/webp" media="(max-width: 767px)" srcset="assets/images/event/sade_detail_phone.webp" />
-           <source media="(max-width: 767px)" srcset="assets/images/event/sade_detail_phone.jpg" />
-           <source type="image/webp" media="(max-width: 1339px)" srcset="assets/images/event/sade_detail_tablet.webp" />
-           <source media="(max-width: 1339px)" srcset="assets/images/event/sade_detail_tablet.jpg" />
-           <source type="image/webp" srcset="assets/images/event/sade_detail.webp" />
-           <img src="assets/images/event/sade_detail.jpg" class="event-info__img" alt="TheBestOfSade" />
-         </picture>
+         <h1 class="event-info__title">Вечер | The Best of Sade</h1>
+         <div class="event-info__blocks">
+
+           <picture class="event-info__picture">
+             <source type="image/webp" media="(max-width: 767px)" srcset="assets/images/event/sade_detail_phone.webp" />
+             <source media="(max-width: 767px)" srcset="assets/images/event/sade_detail_phone.jpg" />
+             <source type="image/webp" media="(max-width: 1339px)" srcset="assets/images/event/sade_detail_tablet.webp" />
+             <source media="(max-width: 1339px)" srcset="assets/images/event/sade_detail_tablet.jpg" />
+             <source type="image/webp" srcset="assets/images/event/sade_detail.webp" />
+             <img src="assets/images/event/sade_detail.jpg" class="event-info__img" alt="TheBestOfSade" />
+           </picture>
+           <div class="event-info__content">
+             <div class="event-info__block1">
+               <div class="event-info__line"></div>
+               <time datetime="2024-12-16" class="event-info__time">16/12/2024</time>
+               <p class="event-info__location">Кафе «Птичка»</p>
+               <div class="event-info__line"></div>
+             </div>
+             <div class="event-info__block2">
+               <div class="event-info__line event-info__line--rotate"></div>
+               <div class="event-info__text-line">
+                 <time datetime="20:00" class="event-info__time">20.00</time>
+                 <p class="event-info__location">начало</p>
+               </div>
+               <p class="event-info__location">Ленина 10 | 2 этаж</p>
+               <div class="event-info__line event-info__line--rotate"></div>
+             </div>
+           </div>
+
+         </div>
        </article>
 
        <article class="article">
@@ -216,7 +245,7 @@
 
              <div class="reserve__scheme-wrapper">
                <svg class="reserve__scene scene" width="780" height="399">
-                 <use xlink:href="assets/icons/scene.svg"></use>
+                 <use xlink:href="assets/icons/symbols.svg#scene"></use>
                </svg>
              </div>
            </div>
@@ -228,17 +257,17 @@
 
            <div class="reserve__tickets-list">
              <div class="reserve__tickets">
-               <div class="reserve__qty" data-caption="шт." data-price="1400">0</div>
-               <div class="reserve__sum" data-currency="₽">0</div>
+               <div class="reserve__qty" data-caption="шт." data-price="1400">9</div>
+               <div class="reserve__sum" data-currency="₽">12600</div>
              </div>
 
              <div class="reserve__tickets">
-               <div class="reserve__qty" data-caption="шт." data-price="1250">0</div>
-               <div class="reserve__sum" data-currency="₽">0</div>
+               <div class="reserve__qty" data-caption="шт." data-price="1250">4</div>
+               <div class="reserve__sum" data-currency="₽">5000</div>
              </div>
            </div>
 
-           <div class="reserve__total" data-caption="Сумма" data-currency="₽">0</div>
+           <div class="reserve__total" data-caption="Сумма" data-currency="₽">17600</div>
            <button type="submit" class="button button--red reserve__submit">
              Купить билеты
            </button>
@@ -279,36 +308,63 @@
    </main>
    <footer class="page-footer">
      <div class="page-footer__main">
-       <svg class="page-footer__line" width="618" height="2">
-         <use xlink:href="assets/icons/line.svg"></use>
-       </svg>
-
-       <svg class="page-footer__line page-footer__line--rotate" width="618" height="2">
-         <use xlink:href="assets/icons/line.svg"></use>
-       </svg>
+       <div class="page-footer__line"></div>
+       <div class="page-footer__line page-footer__line--rotate"></div>
      </div>
      <div class="page-footer__body">
-       <div class="page-footer__column">
-         <nav class="page-footer__nav">
-           <ul class="page-footer__links">
-             <li class="page-footer__item">
-               <a href="#" class="page-footer__link">Календарь мероприятий</a>
-             </li>
-             <li class="page-footer__item">
-               <a href="#" class="page-footer__link">Провести мероприятие</a>
-             </li>
-             <li class="page-footer__item">
-               <a href="#" class="page-footer__link">Стать арендатором</a>
-             </li>
-             <li class="page-footer__item">
-               <a href="#" class="page-footer__link">Наши проекты</a>
-             </li>
-             <li class="page-footer__item">
-               <a href="#" class="page-footer__link">Контакты</a>
-             </li>
-           </ul>
-         </nav>
-         <div>
+       <div class="page-footer__content">
+         <div class="page-footer__column">
+           <nav class="page-footer__nav">
+             <ul class="page-footer__links">
+               <li class="page-footer__item">
+                 <a href="#" class="page-footer__link">Календарь мероприятий</a>
+               </li>
+               <li class="page-footer__item">
+                 <a href="#" class="page-footer__link">Провести мероприятие</a>
+               </li>
+               <li class="page-footer__item">
+                 <a href="#" class="page-footer__link">Стать арендатором</a>
+               </li>
+               <li class="page-footer__item">
+                 <a href="#" class="page-footer__link">Наши проекты</a>
+               </li>
+               <li class="page-footer__item">
+                 <a href="#" class="page-footer__link">Контакты</a>
+               </li>
+             </ul>
+           </nav>
+
+         </div>
+
+
+
+         <form action="https://jsonplaceholder.typicode.com/posts" class="page-footer__subscribe-form subscribe-form" id="js-subscribeForm">
+           <h4 class="subscribe-form__title">
+             Подпишись и будь в курсе происходящего
+           </h4>
+
+           <div class="subscribe-form__wrapper">
+             <div class="subscribe-form__field-wrapper">
+               <input type="email" name="email" placeholder="Email" class="subscribe-form__input" required id="js-subscribeEmail" />
+             </div>
+
+             <button type="submit" class="subscribe-form__submit">
+               Подписаться
+             </button>
+           </div>
+
+           <label class="subscribe-form__check check">
+             <input type="checkbox" name="agree" class="check__input" required checked />
+             <span class="check__mark"></span>
+             <span class="check__label check__label--s">
+               Согласен на обработку персональных данных
+             </span>
+           </label>
+         </form>
+       </div>
+
+       <div class="page-footer__info">
+         <div class="page-footer__copyright">
            <p class="page-footer__Millennials">
              © Millennials 2025
            </p>
@@ -317,53 +373,29 @@
              <a href="#" class="page-footer__link">Cookies</a>
            </div>
          </div>
-       </div>
+         <div class="page-footer__socials">
+           <a href="#" class="page-footer__icon">
+             <svg width="58" height="58">
+               <use xlink:href="assets/icons/symbols.svg#vk1"></use>
+             </svg>
+           </a>
 
-       <div class="page-footer__socials">
-         <a href="#" class="page-footer__icon">
-           <svg width="58" height="58">
-             <use xlink:href="assets/icons/vk1.svg"></use>
-           </svg>
-         </a>
-
-         <a href="#" class="page-footer__icon">
-           <svg width="58" height="58">
-             <use xlink:href="assets/icons/vk2.svg"></use>
-           </svg>
-         </a>
-       </div>
-
-       <form action="https://jsonplaceholder.typicode.com/posts" class="page-footer__subscribe-form subscribe-form" id="js-subscribeForm">
-         <h4 class="subscribe-form__title">
-           Подпишись и будь в курсе происходящего
-         </h4>
-
-         <div class="subscribe-form__wrapper">
-           <div class="subscribe-form__field-wrapper">
-             <input type="email" name="email" placeholder="Email" class="subscribe-form__input" required id="js-subscribeEmail" />
-           </div>
-
-           <button type="submit" class="subscribe-form__submit">
-             Подписаться
-           </button>
+           <a href="#" class="page-footer__icon">
+             <svg width="58" height="58">
+               <use xlink:href="assets/icons/symbols.svg#vk1"></use>
+             </svg>
+           </a>
          </div>
-
-         <label class="subscribe-form__check check">
-           <input type="checkbox" name="agree" class="check__input" required checked />
-           <span class="check__mark"></span>
-           <span class="check__label check__label--s">
-             Согласен на обработку персональных данных
-           </span>
-         </label>
          <div class="page-footer__dignity">
            <a href="#" class="page-footer__dignity--link">
              <span>Создание и продвижение</span>
              <svg class="page-footer__dignity--logo" width="80" height="36">
-               <use xlink:href="assets/icons/dignity.svg"></use>
+               <use xlink:href="assets/icons/symbols.svg#dignity"></use>
              </svg>
            </a>
          </div>
-       </form>
+       </div>
+
      </div>
    </footer>
    <script src="scripts/jquery-3.7.1.min.js"></script>

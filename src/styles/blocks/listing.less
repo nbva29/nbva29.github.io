@@ -1,11 +1,13 @@
 .listing{
-    padding-top: 200px;
+    padding-top: 100px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     .container();
+    padding-left: 0;
+    padding-right: 0;
     @media @bw768{
-        padding-top: 150px;
+        padding-top: 50px;
     }
     @media @bw370{
         padding-top: 80px;
@@ -37,6 +39,26 @@
         @media @bw650 {
            width: 100%;
            max-width: 500px;
+        }
+    }
+    &__link{
+        margin-top: 85px;
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+        @media @bw1020 {
+            margin-top: 55px;
+        }
+        @media @bw650 {
+            margin-top: 65px;
+        }
+
+    }
+    &__article-list{
+        @media @bw768 {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
         }
     }
 }

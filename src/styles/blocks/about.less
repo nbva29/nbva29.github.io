@@ -2,31 +2,78 @@
     &__block1{
         margin-bottom: 100px;
         width: 100%;
+        @media @bw1170 {
+            margin-bottom: 80px;
+        }
+        @media @bw650 {
+            margin-bottom: 60px;
+        }
+    }
+    &__block1-name,
+    &__name{
+        font-family: @font1;
+        font-size: 44px;
+        font-weight: 700;
+        line-height: 1.36;
+        @media @bw1170 {
+            font-size: 26px;
+            line-height: 1.34;
+        }
+        @media @bw650 {
+            font-size: 18px;
+            line-height: 1.389;
+        }
     }
 
     &__block1-name{
         text-align: left;
         margin: 0;
-        font-family: @font1;
-        font-size: 44px;
-        font-weight: 700;
-        line-height: 1.36;
         margin-bottom: 50px;
+        @media @bw650 {
+           margin-bottom: 30px; 
+        }
     }
 
-    &__block1-text{
-        text-align: right;
+    &__block1-text,
+    &__block3-text{
+        text-align: left;
         margin: 0;
+    }
+    &__block1-text,
+    &__text,
+    &__block3-text{    
         font-family: @font1;
         font-size: 18px;
         font-weight: 400;
         line-height: 1.39;
-        max-width: 870px;
         width: 100%;
         color: @black;
-        margin-left: auto;
+        @media @bw1170{
+            font-size: 16px;
+            line-height: 1.375;
+        }
     }
 
+    &__block1-text{
+        max-width: 870px;
+        margin-left: auto;
+        @media @bw1170 {
+            max-width: 637px;
+        }
+    }
+
+    &__block3-text{
+        max-width: 344px;;
+        @media @bw1170{
+            max-width: 280px;
+            margin-top: 80px;
+        }
+        @media @bw650{
+            margin-top: 60px;
+            width: 100%;
+            max-width: none;
+        }
+    }
     
     &__block2{
         display: grid;
@@ -36,6 +83,40 @@
             "pic1 pic2"
             "name pic2"
             "text text";
+        @media @bw1170 {
+            grid-template-columns: 1fr 262px;
+            gap: 0;
+            column-gap: 27px;
+
+            grid-template-areas:
+                "pic1 pic1"
+                "name pic2"
+                "text pic2";
+        }
+        @media @bw650 {
+            grid-template-columns: 100%;
+            grid-template-areas: 
+                "pic1"
+                "name"
+                "text"
+                "pic2";
+            
+        }
+    }
+    &__block3{
+        margin: 74px 0 100px;
+        display: flex;
+        align-items: stretch;
+        gap: 62px; 
+        @media @bw1170 {
+            margin: 52px 0 50px;
+            flex-direction: column;
+            align-items: stretch;
+            gap: 0px;
+        }
+        @media @bw650 {
+            margin: 50px 0 60px;
+        }
     }
 
     &__img {
@@ -55,25 +136,131 @@
     
     &__name{
         grid-area: name;
-        font-size: 44px;
-        font-weight: 700;
+        @media @bw1170 {
+            margin-top: 79px;
+            margin-bottom: 40px;
+        }
+        @media @bw650 {
+            margin-top: 60px;
+            margin-bottom: 30px;
+        }
     }
 
     &__picture2{
         grid-area: pic2;
         align-self: flex-end;
+        @media @bw1170 {
+            margin-top: 52px;
+        }
+        @media @bw650 {
+            max-width: 193px;
+            margin-top: 50px;
+            margin-left: auto;
+        }
     }
 
     &__text{
         grid-area: text;
         margin: 0 80px 0 auto;
         max-width: 870px;
-        width: 100%;
+        @media @bw1170 {
+            margin: 0 auto;
+            max-width: 348px;
+        }
+        
+
+
     }
     &__container{
         .container();
         padding-top: 200px;
         display: flex;
         flex-direction: column;
+        @media @bw1170 {
+            padding-top: 130px;
+        }
+        @media @bw650 {
+            padding-top: 100px;
+        }
     }
+      
+    &__rectangle{
+        position: relative;
+        padding-top: 18px;
+        padding-left: 38px;
+        padding-right: 8px;  
+        @media @bw1170{
+            padding-top: 14px;
+            padding-left: 29px;
+            padding-right: 7px; 
+        }
+        @media @bw650{
+            padding-top: 5px;
+            padding-left: 11px;
+            padding-right: 2px; 
+        }
+
+        img {
+            display: block;
+            width: 100%;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 68%;  
+            background: @red;
+
+        }
+    }
+    &__column{
+        align-items: center;
+        position: relative;
+        display: flex;
+        @media @bw1170 {
+            flex-direction: row;
+            align-items: flex-end;
+            justify-content: space-between;
+        }
+
+        @media @bw650 {
+            flex-direction: column;
+            align-items: flex-start;
+            padding-left: 0;
+            gap: 30px;
+        }
+    } 
+    &__more{
+        width: 100%;
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        bottom: 0;
+        text-decoration: none;
+        &:hover {
+            .more__text {
+                color: @red_dark;
+            }
+
+            .more__arrow-icon {
+                color: @red_dark;
+            }
+        }
+        @media @bw1170 {
+            position: static;
+            width: auto;
+            display: flex;
+            align-items: center;
+            gap: 117px;
+        }
+        @media @bw650 {
+            width: 100%;
+            justify-content: space-between;
+        }
+    
+    }    
 }

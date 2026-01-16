@@ -61,23 +61,23 @@
         <a class="page-header__nav-link" href="#">Блог</a>
         <a class="page-header__nav-link" href="#">О нас</a>
         <a class="page-header__nav-link" href="#">Контакты</a>
+      </nav>
 
-        <div class="page-header__nav-user">
+      <div class="page-header__right-block">
+        <div class="page-header__nav-user" id="js-userBlock">
           <a href="#" class="page-header__nav-user-link">
             Александр С.
           </a>
-          <a href="#" class="page-header__nav-logout">
+          <a href="#" class="page-header__nav-logout" id="js-logoutBtn">
             <svg class="page-header__nav-logout-icon" width="24" height="24">
-              <use xlink:href="assets/icons/log-in.svg"></use>
+              <use xlink:href="assets/icons/symbols.svg#log-in"></use>
             </svg>
           </a>
         </div>
-      </nav>
-      <div class="page-header__right-block">
-        <a href="#" class="page-header__user-btn button">
+        <a href="#" class="page-header__user-btn button" id="js-loginBtn">
           Войти
           <svg class="page-header__user-icon" width="21" height="18">
-            <use xlink:href="assets/icons/user.svg"></use>
+            <use xlink:href="assets/icons/symbols.svg#user"></use>
           </svg>
         </a>
         <button type="button" class="page-header__nav-toggle" id="js-navToggle"></button>
@@ -89,11 +89,11 @@
     <div class="home">
 
       <header class="main__header home__main-header">
-        <h1 class="main-header__title">АРТ — ПРОСТРАНСТВО</h1>
+        <h1 class="main-header__title1">АРТ — ПРОСТРАНСТВО</h1>
         <svg class="main-header__icon" width="1920" height="325">
-          <use xlink:href="assets/icons/LENNI.svg"></use>
+          <use xlink:href="assets/icons/symbols.svg#LENNI"></use>
         </svg>
-        <p class="main-header__title">ДЛЯ ЛЮДЕЙ, ГОРЯЩИХ СЕРДЦЕМ И ДЕЛОМ
+        <p class="main-header__title2">ДЛЯ ЛЮДЕЙ, ГОРЯЩИХ СЕРДЦЕМ И ДЕЛОМ
           <br>МЕСТО ДЛЯ НАСТОЯЩЕГО
         </p>
         <header>
@@ -135,6 +135,22 @@
                   ребятам сделать первые шаги к своей мечте и рассказать всем о том, что их волнует.
                 </p>
               </div>
+              <div class="about__block3">
+                <div class="about__rectangle">
+                  <picture class="about__picture3">
+                    <img src="/assets/images/about/pic3.jpg" class="about__pic3" alt="pic3">
+                  </picture>
+                </div>
+                <div class="about__column">
+                  <p class="about__block3-text">Мы уже успешно организовали и провели более 100 проектов. Посмотрите, как это было классно.</p>
+                  <a href="#" class="about__more">
+                    <p class="more__text">Смотреть</p>
+                    <svg class="more__arrow-icon arrow" width="91" height="60">
+                      <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
             </div>
 
           </section>
@@ -149,7 +165,7 @@
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
                       <article class="events-card ">
-                        <a href="@@ref" class="events-card__link">
+                        <a href="/event.html" class="events-card__link">
                           <picture class="events-card__picture">
                             <source type="image/webp" srcset="assets/images/events/Nirvana.webp" />
                             <img src="assets/images/events/Nirvana.jpg" class="events-card__img" alt="Nirvana" />
@@ -165,7 +181,7 @@
                     </div>
                     <div class="swiper-slide">
                       <article class="events-card ">
-                        <a href="@@ref" class="events-card__link">
+                        <a href="/event.html" class="events-card__link">
                           <picture class="events-card__picture">
                             <source type="image/webp" srcset="assets/images/events/HowStuffWorks.webp" />
                             <img src="assets/images/events/HowStuffWorks.jpg" class="events-card__img" alt="HowStuffWorks" />
@@ -181,7 +197,7 @@
                     </div>
                     <div class="swiper-slide">
                       <article class="events-card ">
-                        <a href="@@ref" class="events-card__link">
+                        <a href="/event.html" class="events-card__link">
                           <picture class="events-card__picture">
                             <source type="image/webp" srcset="assets/images/events/TheBestOfSade.webp" />
                             <img src="assets/images/events/TheBestOfSade.jpg" class="events-card__img" alt="TheBestOfSade" />
@@ -197,7 +213,7 @@
                     </div>
                     <div class="swiper-slide">
                       <article class="events-card ">
-                        <a href="@@ref" class="events-card__link">
+                        <a href="/event.html" class="events-card__link">
                           <picture class="events-card__picture">
                             <source type="image/webp" srcset="assets/images/events/Exhibition.webp" />
                             <img src="assets/images/events/Exhibition.jpg" class="events-card__img" alt="Exhibition" />
@@ -213,7 +229,7 @@
                     </div>
                     <div class="swiper-slide">
                       <article class="events-card ">
-                        <a href="@@ref" class="events-card__link">
+                        <a href="/event.html" class="events-card__link">
                           <picture class="events-card__picture">
                             <source type="image/webp" srcset="assets/images/events/Tatler.webp" />
                             <img src="assets/images/events/Tatler.jpg" class="events-card__img" alt="Tatler" />
@@ -229,7 +245,7 @@
                     </div>
                     <div class="swiper-slide">
                       <article class="events-card ">
-                        <a href="@@ref" class="events-card__link">
+                        <a href="/event.html" class="events-card__link">
                           <picture class="events-card__picture">
                             <source type="image/webp" srcset="assets/images/events/TheHatters.webp" />
                             <img src="assets/images/events/TheHatters.jpg" class="events-card__img" alt="TheHatters" />
@@ -247,17 +263,18 @@
                   <footer class="swiper-footer">
                     <button type="button" class="swiper-arrow-prev arrow arrow--left">
                       <svg class="arrow__icon" width="91" height="60">
-                        <use xlink:href="assets/icons/arrow.svg"></use>
+                        <use xlink:href="assets/icons/symbols.svg#arrow"></use>
                       </svg>
                     </button>
                     <div class="swiper-pagination"></div>
                     <button type="button" class="swiper-arrow-next arrow">
                       <svg class="arrow__icon" width="91" height="60">
-                        <use xlink:href="assets/icons/arrow.svg"></use>
+                        <use xlink:href="assets/icons/symbols.svg#arrow"></use>
                       </svg>
                     </button>
                   </footer>
                 </div>
+                <a href="#" class="upcoming__link link">Смотреть все</a>
               </div>
             </div>
           </section>
@@ -268,6 +285,8 @@
               <article class="article-card ">
                 <a href="#" class="article-card__link">
                   <picture class="article-card__picture">
+                    <source type="image/webp" media="(max-width: 320px)" srcset="/assets/images/blog/photoshoot_phone.webp" />
+                    <source media="(max-width: 320px)" srcset="/assets/images/blog/photoshoot_phone.jpg" />
                     <source type="image/webp" media="(max-width: 450px)" srcset="/assets/images/blog/photoshoot.webp" />
                     <source media="(max-width: 450px)" srcset="/assets/images/blog/photoshoot.jpg" />
                     <source type="image/webp" media="(max-width: 1169px)" srcset="/assets/images/blog/photoshoot_tablet.webp" />
@@ -283,11 +302,9 @@
 
                   <a href="#" class="article-card__title-link">
                     <h4 class="article-card__title">Фотосессия в стенах Театра драмы</h4>
-                    <span class="article-card__arrow arrow">
-                      <svg class="article-card__arrow-icon" width="91" height="60">
-                        <use xlink:href="assets/icons/arrow.svg"></use>
-                      </svg>
-                    </span>
+                    <svg class="article-card__arrow arrow" width="91" height="60">
+                      <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+                    </svg>
                   </a>
                   <p class="article-card__description">
                     Организовывая фотосессию для локального бренда одежды мы смогли воплотить все пожелания заказчика и у нас получилась отличная работа. Смотрите как это было
@@ -297,6 +314,8 @@
               <article class="article-card ">
                 <a href="#" class="article-card__link">
                   <picture class="article-card__picture">
+                    <source type="image/webp" media="(max-width: 320px)" srcset="/assets/images/blog/ExhibitionVR_phone.webp" />
+                    <source media="(max-width: 320px)" srcset="/assets/images/blog/ExhibitionVR_phone.jpg" />
                     <source type="image/webp" media="(max-width: 450px)" srcset="/assets/images/blog/ExhibitionVR.webp" />
                     <source media="(max-width: 450px)" srcset="/assets/images/blog/ExhibitionVR.jpg" />
                     <source type="image/webp" media="(max-width: 1169px)" srcset="/assets/images/blog/ExhibitionVR_tablet.webp" />
@@ -312,11 +331,9 @@
 
                   <a href="#" class="article-card__title-link">
                     <h4 class="article-card__title">Выставка VR в Томске</h4>
-                    <span class="article-card__arrow arrow">
-                      <svg class="article-card__arrow-icon" width="91" height="60">
-                        <use xlink:href="assets/icons/arrow.svg"></use>
-                      </svg>
-                    </span>
+                    <svg class="article-card__arrow arrow" width="91" height="60">
+                      <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+                    </svg>
                   </a>
                   <p class="article-card__description">
                     Клуб виртуальной реальности - это другие миры. яркие эмоции. новый опыт. ... Мы предоставляем нашим клиентам лучший игровой VR-опыт в Томске.
@@ -326,6 +343,8 @@
               <article class="article-card ">
                 <a href="#" class="article-card__link">
                   <picture class="article-card__picture">
+                    <source type="image/webp" media="(max-width: 320px)" srcset="/assets/images/blog/rocking_radio_phone.webp" />
+                    <source media="(max-width: 320px)" srcset="/assets/images/blog/rocking_radio_phone.jpg" />
                     <source type="image/webp" media="(max-width: 450px)" srcset="/assets/images/blog/rocking_radio.webp" />
                     <source media="(max-width: 450px)" srcset="/assets/images/blog/rocking_radio.jpg" />
                     <source type="image/webp" media="(max-width: 1169px)" srcset="/assets/images/blog/rocking_radio_tablet.webp" />
@@ -341,20 +360,17 @@
 
                   <a href="#" class="article-card__title-link">
                     <h4 class="article-card__title">Rocking radio в заброшенном ангаре</h4>
-                    <span class="article-card__arrow arrow">
-                      <svg class="article-card__arrow-icon" width="91" height="60">
-                        <use xlink:href="assets/icons/arrow.svg"></use>
-                      </svg>
-                    </span>
+                    <svg class="article-card__arrow arrow" width="91" height="60">
+                      <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+                    </svg>
                   </a>
                   <p class="article-card__description">
                     15 электрогенераторов, километры проводов и пару тонн света. Все это для того, чтобы организовать лучшую вечеринку года для ребят из Новосибирска.
                   </p>
                 </div>
               </article>
-
+              <a href="#" class="listing__link link">Смотреть все</a>
             </div>
-            <a href="#" class="listing__link link">Смотреть все</a>
           </section>
 
           <section class="contacts home__contacts">
@@ -363,9 +379,12 @@
               <div class="contacts__blocks">
                 <div class="contacts__info ">
                   <div class="contacts__location">
-                    <svg class="contacts__icon" width="110" height="110">
-                      <use xlink:href="assets/icons/location.svg"></use>
-                    </svg>
+                    <div class="contacts__squre">
+                      <svg class="contacts__logo" width="24" height="24">
+                        <use xlink:href="assets/icons/symbols.svg#location"></use>
+                      </svg>
+                    </div>
+
                     <div class="contacts__text">
                       <h3 class="contacts__name">Томск, Красноармейская 146</h3>
                       <p class="contacts__content">
@@ -375,9 +394,12 @@
                     </div>
                   </div>
                   <div class="contacts__home">
-                    <svg class="contacts__icon" width="110" height="110">
-                      <use xlink:href="assets/icons/home.svg"></use>
-                    </svg>
+                    <div class="contacts__squre">
+                      <svg class="contacts__logo" width="24" height="24">
+                        <use xlink:href="assets/icons/symbols.svg#home"></use>
+                      </svg>
+                    </div>
+
                     <div class="contacts__text">
                       <h3 class="contacts__name">Отдел аренды</h3>
                       <p class="contacts__content">
@@ -388,9 +410,11 @@
                     </div>
                   </div>
                   <div class="contacts__star">
-                    <svg class="contacts__icon" width="110" height="110">
-                      <use xlink:href="assets/icons/star.svg"></use>
-                    </svg>
+                    <div class="contacts__squre">
+                      <svg class="contacts__logo" width="24" height="24">
+                        <use xlink:href="assets/icons/symbols.svg#star"></use>
+                      </svg>
+                    </div>
                     <div class="contacts__text">
                       <h3 class="contacts__name">Отдел мероприятий</h3>
                       <p class="contacts__content">
@@ -401,51 +425,79 @@
                     </div>
                   </div>
                 </div>
-                <div class="contacts__wrapper">
-                  <div class="contacts__map" id="js-contactsMap"></div>
-                </div>
+                <div class="contacts__map" id="js-contactsMap"></div>
               </div>
             </div>
           </section>
-
-          <p class="mak">Просто делайте, что нравится, а мы вам поможем</p>
-
-          <div class="text"></div>
+          <div class="mak">
+            <div class="mak__row">
+              <p class="mak__text text1">Просто делайте, </p>
+              <p class="mak__text text2"> что нравится, </p>
+            </div>
+            <p class="mak__text text3">а мы вам поможем</p>
+          </div>
     </div>
   </main>
 
   <footer class="page-footer">
     <div class="page-footer__main">
-      <svg class="page-footer__line" width="618" height="2">
-        <use xlink:href="assets/icons/line.svg"></use>
-      </svg>
-
-      <svg class="page-footer__line page-footer__line--rotate" width="618" height="2">
-        <use xlink:href="assets/icons/line.svg"></use>
-      </svg>
+      <div class="page-footer__line"></div>
+      <div class="page-footer__line page-footer__line--rotate"></div>
     </div>
     <div class="page-footer__body">
-      <div class="page-footer__column">
-        <nav class="page-footer__nav">
-          <ul class="page-footer__links">
-            <li class="page-footer__item">
-              <a href="#" class="page-footer__link">Календарь мероприятий</a>
-            </li>
-            <li class="page-footer__item">
-              <a href="#" class="page-footer__link">Провести мероприятие</a>
-            </li>
-            <li class="page-footer__item">
-              <a href="#" class="page-footer__link">Стать арендатором</a>
-            </li>
-            <li class="page-footer__item">
-              <a href="#" class="page-footer__link">Наши проекты</a>
-            </li>
-            <li class="page-footer__item">
-              <a href="#" class="page-footer__link">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-        <div>
+      <div class="page-footer__content">
+        <div class="page-footer__column">
+          <nav class="page-footer__nav">
+            <ul class="page-footer__links">
+              <li class="page-footer__item">
+                <a href="#" class="page-footer__link">Календарь мероприятий</a>
+              </li>
+              <li class="page-footer__item">
+                <a href="#" class="page-footer__link">Провести мероприятие</a>
+              </li>
+              <li class="page-footer__item">
+                <a href="#" class="page-footer__link">Стать арендатором</a>
+              </li>
+              <li class="page-footer__item">
+                <a href="#" class="page-footer__link">Наши проекты</a>
+              </li>
+              <li class="page-footer__item">
+                <a href="#" class="page-footer__link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+
+        </div>
+
+
+
+        <form action="https://jsonplaceholder.typicode.com/posts" class="page-footer__subscribe-form subscribe-form" id="js-subscribeForm">
+          <h4 class="subscribe-form__title">
+            Подпишись и будь в курсе происходящего
+          </h4>
+
+          <div class="subscribe-form__wrapper">
+            <div class="subscribe-form__field-wrapper">
+              <input type="email" name="email" placeholder="Email" class="subscribe-form__input" required id="js-subscribeEmail" />
+            </div>
+
+            <button type="submit" class="subscribe-form__submit">
+              Подписаться
+            </button>
+          </div>
+
+          <label class="subscribe-form__check check">
+            <input type="checkbox" name="agree" class="check__input" required checked />
+            <span class="check__mark"></span>
+            <span class="check__label check__label--s">
+              Согласен на обработку персональных данных
+            </span>
+          </label>
+        </form>
+      </div>
+
+      <div class="page-footer__info">
+        <div class="page-footer__copyright">
           <p class="page-footer__Millennials">
             © Millennials 2025
           </p>
@@ -454,53 +506,29 @@
             <a href="#" class="page-footer__link">Cookies</a>
           </div>
         </div>
-      </div>
+        <div class="page-footer__socials">
+          <a href="#" class="page-footer__icon">
+            <svg width="58" height="58">
+              <use xlink:href="assets/icons/symbols.svg#vk1"></use>
+            </svg>
+          </a>
 
-      <div class="page-footer__socials">
-        <a href="#" class="page-footer__icon">
-          <svg width="58" height="58">
-            <use xlink:href="assets/icons/vk1.svg"></use>
-          </svg>
-        </a>
-
-        <a href="#" class="page-footer__icon">
-          <svg width="58" height="58">
-            <use xlink:href="assets/icons/vk2.svg"></use>
-          </svg>
-        </a>
-      </div>
-
-      <form action="https://jsonplaceholder.typicode.com/posts" class="page-footer__subscribe-form subscribe-form" id="js-subscribeForm">
-        <h4 class="subscribe-form__title">
-          Подпишись и будь в курсе происходящего
-        </h4>
-
-        <div class="subscribe-form__wrapper">
-          <div class="subscribe-form__field-wrapper">
-            <input type="email" name="email" placeholder="Email" class="subscribe-form__input" required id="js-subscribeEmail" />
-          </div>
-
-          <button type="submit" class="subscribe-form__submit">
-            Подписаться
-          </button>
+          <a href="#" class="page-footer__icon">
+            <svg width="58" height="58">
+              <use xlink:href="assets/icons/symbols.svg#vk1"></use>
+            </svg>
+          </a>
         </div>
-
-        <label class="subscribe-form__check check">
-          <input type="checkbox" name="agree" class="check__input" required checked />
-          <span class="check__mark"></span>
-          <span class="check__label check__label--s">
-            Согласен на обработку персональных данных
-          </span>
-        </label>
         <div class="page-footer__dignity">
           <a href="#" class="page-footer__dignity--link">
             <span>Создание и продвижение</span>
             <svg class="page-footer__dignity--logo" width="80" height="36">
-              <use xlink:href="assets/icons/dignity.svg"></use>
+              <use xlink:href="assets/icons/symbols.svg#dignity"></use>
             </svg>
           </a>
         </div>
-      </form>
+      </div>
+
     </div>
   </footer>
 
@@ -509,7 +537,7 @@
       <div class="pp__sticky-close">
         <button type="button" title="Закрыть" class="pp__x-btn x-btn js-ppCloseBtn">
           <svg class="x-btn__icon" width="24" height="24">
-            <use xlink:href="assets/icons/fi_x.svg"></use>
+            <use xlink:href="assets/icons/symbols.svg#fi_x"></use>
           </svg>
         </button>
       </div>

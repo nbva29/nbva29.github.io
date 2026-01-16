@@ -14,6 +14,11 @@
     overflow: hidden;
     cursor: pointer;
     transition: background-color 0.2s, color 0.2s;
+    @media @bw768 {
+        padding-right: 56px;
+        padding-left: 56px;
+        font-size: 14px;
+    }
     &:hover,
     &:active{
         background-color: @black;
@@ -30,6 +35,9 @@
         &:hover{
             background-color: @red_dark;
             border-color: @red_dark;
+        }
+        @media @bw768 {
+            height: 49px;
         }
     }
 }

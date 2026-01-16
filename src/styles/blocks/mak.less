@@ -1,8 +1,49 @@
 .mak{
-    text-align: center;
-    margin: 150px 0 40px;
-    font-family: "mak";
-    font-weight: 700;
-    font-size: 128px;
-    width: 100%;
+    padding: 150px 0 40px;
+    position: relative;
+    width: 160%;
+    transform: translateX(-31%);
+    overflow-x:hidden;
+    @media @bw1340 {
+        padding: 100px 0 20px;
+    }
+    &__row{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        @media @bw1340 {
+            flex-direction: column;
+        }
+    }
+    &__text{
+        margin: 0;
+        text-align: end;
+        font-family: @font3;
+        font-weight: 700;
+        font-size: 128px;
+        
+        @media @bw1660 {
+            font-size: 90px;
+        }
+        @media @bw1340 {
+            &.text1{
+                transform: translateX(29%);
+                text-align: start;
+            }
+            &.text3{
+                transform: translateX(2%);
+            }
+            font-size: 80px;  
+        }
+        @media @bw768{
+            font-size: 40px;
+            &.text2{
+                transform: translateX(7%);
+            }
+            &.text3{
+                transform: translateX(4%);
+            }
+        } 
+    }
+
 }

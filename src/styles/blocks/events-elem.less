@@ -3,7 +3,17 @@
         display: flex;             
         justify-content: space-between; 
         gap: 66px;                 
-        width: 100%;   
+        width: 100%;
+        @media @bw1020 {
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0;
+        }
+        @media @bw768 {
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }     
     }
     &__information,
     &__contact,
@@ -12,7 +22,28 @@
         flex-direction: column;      
         align-items: center;         
         text-align: center;          
-        max-width: 400px;           
+        max-width: 400px;
+        @media @bw1340 {
+            width: 280px;
+        } 
+        @media @bw768 {
+            max-width: 244px;
+        }          
+    }
+    &__information{
+        @media @bw1020 {
+           margin-right: auto; 
+        }
+    }
+    &__handshake{
+        @media @bw1020 {
+            display: flex;
+            align-items: center;
+            margin-top: 50px;
+        }
+        @media @bw768 {
+            margin: 0;
+        }
     }
     &__name{
         margin: 40px 0 10px;
@@ -21,6 +52,16 @@
         font-weight: 600;
         line-height: 1.35;
         color: @black;
+        @media @bw1020 {
+            margin: 41px 0 16px;
+            font-size: 18px;
+            line-height: 1.38;
+        }
+        @media @bw768 {
+            margin: 30px 0 16px;
+            font-size: 14px;
+            line-height: 1.357;
+        }
     }
     &__content{
         margin: 0;
@@ -36,8 +77,16 @@
             transition: text-decoration 0.2s;
 
             &:hover {
-                text-decoration: underline; // появляется при наведении
+                text-decoration: underline; 
             }
+        }
+        @media @bw1020 {
+            font-size: 14px;
+            line-height: 1.357;
+        }
+        @media @bw768 {
+            font-size: 13px;
+            line-height: 1.38;
         }
     }
     &__container{

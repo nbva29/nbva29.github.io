@@ -9,7 +9,31 @@
         root.classList.toggle("show-nav");
     });
 
+    const loginBtn = document.querySelector("#js-loginBtn");
+    const userBlock = document.querySelector("#js-userBlock");
+    const logoutBtn = document.querySelector("#js-logoutBtn");
+
+    if (loginBtn && userBlock && logoutBtn) {
+
+      loginBtn.addEventListener("click", function(e) {
+        e.preventDefault();
+        loginBtn.classList.add("is-hidden");
+        userBlock.classList.add("is-active");
+      });
+
+
+      logoutBtn.addEventListener("click", function(e) {
+        e.preventDefault();
+        userBlock.classList.remove("is-active");
+        loginBtn.classList.remove("is-hidden");
+      });
+
+    }
+
+
     const eventPP = document.querySelector("#js-eventPP");
+    const body = document.body; 
+
 
     if(eventPP){
 
@@ -21,6 +45,7 @@
                 document.removeEventListener("keyup", closeEventPP);
                 eventPP.removeEventListener("click", closeEventPP);
 
+                body.style.overflow = 'visible';
                 eventPP.classList.remove("pp--active");
             };
 
@@ -38,6 +63,8 @@
 
         eventOpenBtn.addEventListener("click", function(){
             eventPP.classList.add("pp--active");
+
+            body.style.overflow = 'hidden';
 
             document.addEventListener("keyup", closeEventPP);
             eventPP.addEventListener("click", closeEventPP);
